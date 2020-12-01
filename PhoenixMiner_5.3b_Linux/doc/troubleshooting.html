@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Troubleshooting &mdash; PhoenixMiner 5.3b documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="FAQ" href="faq.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PhoenixMiner
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#download-and-install">Download and install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#ethash-mining-command-line-examples">Ethash mining command-line examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#dual-mining-command-line-examples">Dual-mining command-line examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#progpow-command-line-examples">ProgPOW command-line examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features, requirements, and limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Command-line arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#pool-options">Pool options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#general-pool-options">General pool options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#benchmark-mode">Benchmark mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#remote-control-options">Remote control options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#mining-options">Mining options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#hardware-control-options-you-may-specify-these-options-per-gpu">Hardware control options (you may specify these options per-GPU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#general-options">General Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#per-gpu-options">Per-GPU options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interactive.html">Interactive console commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config-files.html">Configuration files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote.html">Remote monitoring and management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw-control.html">Hardware control options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PhoenixMiner</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Troubleshooting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>P001: I’m using AMD RX470/480/570/580 or similar card and my hashrate dropped significantly in the past few months for Ethereum and Ethereum classic!</dt><dd><p>S: This is known problem with some cards. For the newer cards (RX470/480/570/580), this can be
+solved by using the special blockchain driver from AMD (or try the latest drivers, they may
+incorporate the fix). For the older cards there is no workaround but you still can mine EXP,
+Musicoin, UBQ or PIRL with the same speed that you mined ETH before the drop.</p>
+</dd>
+<dt>P002: My Nvidia GTX9x0 card is showing very low hashrate under Windows 10!</dt><dd><p>S: While there is a (convoluted) workaround, the best solution is to avoid Windows 10
+for these cards - use Windows 7 instead.</p>
+</dd>
+<dt>P003: I’m using Nvidia GTX970 (or similar) card and my hashrate dropped dramatically for Ethereum or Ethereum classic!</dt><dd><p>S: GTX970 has enough VRAM for larger DAGs but its hashate drops when the DAG size starts
+to exceed 2 GB or so. Unlike the AMD Polaris-based cards, there is no workaround for this
+problem. We recommend using these cards to mine EXP, Musicoin, UBQ or PIRL with the same speed
+that you used to ETH before the drop.</p>
+</dd>
+<dt>P004: I can’t see some of my cards (or their fan speed and temperature) when using Windows Remote Desktop (RDP)!</dt><dd><p>S: This is a known problem with RDP. Use VNC or TeamViewer instead.</p>
+</dd>
+<dt>P005: On Windows 10, if you click inside the PhoenixMiner console, it freezes!</dt><dd><p>S: This is a known problem on Windows 10, related to so called “Quick Edit” feature of the command
+prompt window. From PhoenixMiner 2.6, the QuickMode is disabled by default, so you shouldn’t experience
+this problem. If you still, do, read here how to solve it: <a class="reference external" href="https://stackoverflow.com/q/33883530">https://stackoverflow.com/q/33883530</a></p>
+</dd>
+<dt>P006: Immediately after starting, PhoenixMiner stops working and the last message is “debugger detected”</dt><dd><p>S: If you have only Nvidia cards, add the option -nvidia to the PhoenixMiner.exe command line.
+If you have only AMD cards, add the option -amd to the command line.</p>
+</dd>
+<dt>P007: (<em>Windows only</em>) PhoenixMiner shows an error after allocating DAG buffer and shuts down.</dt><dd><p>S: If you have more than one GPU, make sure that your Windows page file minimal size is set to at
+least (N x DS + 4) GB, where N is the number of GPUs, and DS is the size of DAG in GB (about 2.7 GB around
+September 2018 for ETC and ETH). For example, if you have 10 GPUs, you need 10 x 2.7 + 4 = 31 GB minimal
+size of the page file. Note that this will increase as the DAG sizes increase.</p>
+</dd>
+<dt>P008: The miner sometimes crashes when the DAG epoch change.</dt><dd><p>S: During DAG generation, the GPUs are loaded more than during the normal operation. If you have
+overclocked or undervolted the GPUs “to the edge”, the DAG generation ofter pushes them “over the
+edge”. Another possible reason for the crash (especially if the whole rig crashes) is the higher
+power usage during this process. You can lower the DAG generation speed by specifying the -lidag
+command-line option. The possible values are 0 (no slow down), 1, 2, and 3 (max slowdown).
+In order to check if your rig would be stable during DAG generation, run it in benchmark mode
+by specifying the -bench 170 command line option. Then every time when you press the key ‘d’
+the miner will advance to the next DAG epoch, and you will be able to see if it is stable during
+multiple DAG generations. If it isn’t you can try to alter the -lidag and -eres command line options
+until the desired stability is achieved.</p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="faq.html" class="btn btn-neutral float-left" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Phoenix
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

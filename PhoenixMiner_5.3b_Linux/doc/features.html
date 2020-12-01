@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Features, requirements, and limitations &mdash; PhoenixMiner 5.3b documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Command-line arguments" href="arguments.html" />
+    <link rel="prev" title="Quick start" href="quick-start.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PhoenixMiner
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#download-and-install">Download and install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#ethash-mining-command-line-examples">Ethash mining command-line examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#dual-mining-command-line-examples">Dual-mining command-line examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#progpow-command-line-examples">ProgPOW command-line examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Features, requirements, and limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Command-line arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#pool-options">Pool options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#general-pool-options">General pool options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#benchmark-mode">Benchmark mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#remote-control-options">Remote control options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#mining-options">Mining options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#hardware-control-options-you-may-specify-these-options-per-gpu">Hardware control options (you may specify these options per-GPU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#general-options">General Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#per-gpu-options">Per-GPU options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interactive.html">Interactive console commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config-files.html">Configuration files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote.html">Remote monitoring and management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw-control.html">Hardware control options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PhoenixMiner</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Features, requirements, and limitations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="features-requirements-and-limitations">
+<h1>Features, requirements, and limitations<a class="headerlink" href="#features-requirements-and-limitations" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Highly optimized OpenCL and CUDA cores for maximum ethash mining speed</p></li>
+<li><p>Lowest developer fee of 0.65% (35 seconds defvee mining per each 90 minutes)</p></li>
+<li><p>Dual mining ethash/Blake2s with lowest devfee of 0.9% (35 seconds defvee mining per each 65 minutes)</p></li>
+<li><p>Advanced statistics: actual difficulty of each share as well as effective hashrate at the pool</p></li>
+<li><p>Supports AMD RX5500, RX5700, Radeon VII, Vega, 590/580/570/480/470, 460/560, Fury, 390/290 and older AMD GPUs with enough VRAM</p></li>
+<li><p>Supports Nvidia 20x0, 16x0, 10x0 and 9x0 series as well as older cards with enough VRAM</p></li>
+<li><p>DAG file generation in the GPU for faster start-up and DAG epoch switches</p></li>
+<li><p>Supports all ethash mining pools and stratum protocols, including solo mining via HTTP</p></li>
+<li><p>Supports secure pool connections (e.g. <code class="docutils literal notranslate"><span class="pre">ssl://eu1.ethermine.org:5555)</span></code> to prevent IP hijacking attacks</p></li>
+<li><p>Detailed statistics, including the individual cards hashrate, shares, temperature, fan speed, clocks, voltages, etc.</p></li>
+<li><p>Unlimited number of fail-over pools in <code class="docutils literal notranslate"><span class="pre">epools.txt</span></code> configuration file (or two on the command line)</p></li>
+<li><p>GPU tuning for the AMD GPUs to achieve maximum performance with your rig</p></li>
+<li><p>Supports devfee on alternative ethash currencies like ETC, EXP, Music, UBQ, Pirl, Ellaism,
+Metaverse ETP, WhaleCoin, and Victorium. This avoids any additional loses and instabilities
+becuase of additional DAG generation, and also allows you to use older cards with small VRAM
+or low hashate on current DAG epochs (e.g. GTX970, 280X).</p></li>
+<li><p>Supports the Ubqhash algorithm for the UBQ coin. Please note that you must
+add <code class="docutils literal notranslate"><span class="pre">-coin</span> <span class="pre">ubq</span></code> to your command line (or <code class="docutils literal notranslate"><span class="pre">COIN:</span> <span class="pre">ubq</span></code> to your <code class="docutils literal notranslate"><span class="pre">epools.txt</span> <span class="pre">file</span></code>) in order to mine UBQ</p></li>
+<li><p>Supports the ProgPOW algorithm for the Bitcoin Interest (BCI) coin mining. Please note that you must
+add <code class="docutils literal notranslate"><span class="pre">-coin</span> <span class="pre">bci</span></code> to your command line (or <code class="docutils literal notranslate"><span class="pre">COIN:</span> <span class="pre">bci</span></code> to your <code class="docutils literal notranslate"><span class="pre">epools.txt</span></code> file) in order to mine BCI</p></li>
+<li><p>Full compatibility with the industry standard Claymore’s Dual Ethereum miner, including most of
+command-line options, configuration files, and remote monitoring and management.</p></li>
+<li><p>More features coming soon!</p></li>
+</ul>
+<p>PhoenixMiner requires Windows x64 (Windows 7, Windows 10, etc.), or Linux x64 (tested on Ubuntu LTS
+and Debian stable).</p>
+<p>PhoenixMiner also supports dual mining (simultaneous mining of ethash/ubqhash and other cryptocoin algorithm).
+Currently we support only Blake2s as secondary algorithm for dual mining. Note that when using dual mining,
+there is no devfee on the secondary coin but the devfee on the main coin is increased to 0.9%. In other words,
+if you are using the dual mining feature PhoenixMiner will mine for us for 35 seconds every 65 minutes.</p>
+<p>While the miner is running, you can use some interactive commands. Press the key <code class="docutils literal notranslate"><span class="pre">h</span></code> while the
+miner’s console window has the keyboard focus to see the list of the available commands. The
+interactive commands are also listed at the end of the following section.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arguments.html" class="btn btn-neutral float-right" title="Command-line arguments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quick-start.html" class="btn btn-neutral float-left" title="Quick start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Phoenix
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

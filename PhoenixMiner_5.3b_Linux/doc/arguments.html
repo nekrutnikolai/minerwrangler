@@ -1,0 +1,622 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command-line arguments &mdash; PhoenixMiner 5.3b documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Interactive console commands" href="interactive.html" />
+    <link rel="prev" title="Features, requirements, and limitations" href="features.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PhoenixMiner
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#download-and-install">Download and install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#ethash-mining-command-line-examples">Ethash mining command-line examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#dual-mining-command-line-examples">Dual-mining command-line examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#progpow-command-line-examples">ProgPOW command-line examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features, requirements, and limitations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command-line arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pool-options">Pool options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-pool-options">General pool options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#benchmark-mode">Benchmark mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remote-control-options">Remote control options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mining-options">Mining options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-control-options-you-may-specify-these-options-per-gpu">Hardware control options (you may specify these options per-GPU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-options">General Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#per-gpu-options">Per-GPU options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interactive.html">Interactive console commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config-files.html">Configuration files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote.html">Remote monitoring and management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw-control.html">Hardware control options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PhoenixMiner</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Command-line arguments</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-arguments">
+<h1>Command-line arguments<a class="headerlink" href="#command-line-arguments" title="Permalink to this headline">¶</a></h1>
+<p>Note that PhoenixMiner supports most of the command-line options of Claymore’s dual Ethereum miner
+so you can use the same command line options as the ones you would have used with Claymore’s miner.</p>
+<div class="section" id="pool-options">
+<h2>Pool options<a class="headerlink" href="#pool-options" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>-pool &lt;host:port&gt;</dt><dd><p>Ethash pool address (prepend the host name with <code class="docutils literal notranslate"><span class="pre">ssl://</span></code> for SSL pool, or <code class="docutils literal notranslate"><span class="pre">http://</span></code> for solo mining).</p>
+</dd>
+<dt>-wal &lt;wallet&gt;</dt><dd><p>Ethash wallet (some pools require appending of user name and/or worker).</p>
+</dd>
+<dt>-pass &lt;password&gt;</dt><dd><p>Ethash password (most pools don’t require it, use <code class="docutils literal notranslate"><span class="pre">x</span></code> as password if unsure)</p>
+</dd>
+<dt>-worker &lt;name&gt;</dt><dd><p>Ethash worker name (most pools accept it as part of wallet)</p>
+</dd>
+<dt>-proto &lt;n&gt;</dt><dd><p>Selects the kind of stratum protocol for the ethash pool:</p>
+<dl class="field-list simple">
+<dt class="field-odd">1</dt>
+<dd class="field-odd"><p>miner-proxy stratum spec (e.g. coinotron)</p>
+</dd>
+<dt class="field-even">2</dt>
+<dd class="field-even"><p>eth-proxy (e.g. ethermine, nanopool) - this is the default, works for most pools</p>
+</dd>
+<dt class="field-odd">3</dt>
+<dd class="field-odd"><p>qtminer (e.g. ethermine, ethpool)</p>
+</dd>
+<dt class="field-even">4</dt>
+<dd class="field-even"><p>EthereumStratum/1.0.0 (e.g. nicehash)</p>
+</dd>
+<dt class="field-odd">5</dt>
+<dd class="field-odd"><p>EthereumStratum/2.0.0</p>
+</dd>
+</dl>
+</dd>
+<dt>-coin &lt;coin&gt;</dt><dd><p>Ethash coin to use for devfee to avoid switching DAGs:</p>
+<dl class="field-list simple">
+<dt class="field-odd">auto</dt>
+<dd class="field-odd"><p>Auto-detect the coin (default)</p>
+</dd>
+<dt class="field-even">eth</dt>
+<dd class="field-even"><p>Ethereum</p>
+</dd>
+<dt class="field-odd">etc</dt>
+<dd class="field-odd"><p>Ethereum Classic</p>
+</dd>
+<dt class="field-even">exp</dt>
+<dd class="field-even"><p>Expanse</p>
+</dd>
+<dt class="field-odd">music</dt>
+<dd class="field-odd"><p>Musicoin</p>
+</dd>
+<dt class="field-even">ubq</dt>
+<dd class="field-even"><p>UBIQ</p>
+</dd>
+<dt class="field-odd">pirl</dt>
+<dd class="field-odd"><p>Pirl</p>
+</dd>
+<dt class="field-even">ella</dt>
+<dd class="field-even"><p>Ellaism</p>
+</dd>
+<dt class="field-odd">etp</dt>
+<dd class="field-odd"><p>Metaverse ETP</p>
+</dd>
+<dt class="field-even">whale</dt>
+<dd class="field-even"><p>WhaleCoin</p>
+</dd>
+<dt class="field-odd">vic</dt>
+<dd class="field-odd"><p>Victorium</p>
+</dd>
+<dt class="field-even">nuko</dt>
+<dd class="field-even"><p>Nekonium</p>
+</dd>
+<dt class="field-odd">mix</dt>
+<dd class="field-odd"><p>Mix</p>
+</dd>
+<dt class="field-even">egem</dt>
+<dd class="field-even"><p>EtherGem</p>
+</dd>
+<dt class="field-odd">clo</dt>
+<dd class="field-odd"><p>Callisto</p>
+</dd>
+<dt class="field-even">dbix</dt>
+<dd class="field-even"><p>DubaiCoin</p>
+</dd>
+<dt class="field-odd">moac</dt>
+<dd class="field-odd"><p>MOAC</p>
+</dd>
+<dt class="field-even">etho</dt>
+<dd class="field-even"><p>Ether-1</p>
+</dd>
+<dt class="field-odd">yoc</dt>
+<dd class="field-odd"><p>Yocoin</p>
+</dd>
+<dt class="field-even">b2g</dt>
+<dd class="field-even"><p>Bitcoiin2Gen</p>
+</dd>
+<dt class="field-odd">esn</dt>
+<dd class="field-odd"><p>Ethersocial</p>
+</dd>
+<dt class="field-even">ath</dt>
+<dd class="field-even"><p>Atheios</p>
+</dd>
+<dt class="field-odd">reosc</dt>
+<dd class="field-odd"><p>REOSC</p>
+</dd>
+<dt class="field-even">qkc</dt>
+<dd class="field-even"><p>QuarkChain</p>
+</dd>
+<dt class="field-odd">bci</dt>
+<dd class="field-odd"><p>Bitcoin Interest</p>
+</dd>
+</dl>
+</dd>
+<dt>-stales &lt;n&gt;</dt><dd><p>Submit stales to ethash pool: 1 - yes (default), 0 - no</p>
+</dd>
+<dt>-pool2 &lt;host:port&gt;</dt><dd><p>Failover ethash pool address. Same as <code class="docutils literal notranslate"><span class="pre">-pool</span></code> but for the failover pool</p>
+</dd>
+<dt>-wal2 &lt;wallet&gt;</dt><dd><p>Failover ethash wallet (if missing <code class="docutils literal notranslate"><span class="pre">-wal</span></code> will be used for the failover pool too)</p>
+</dd>
+<dt>-pass2 &lt;password&gt;</dt><dd><p>Failover ethash password (if missing <code class="docutils literal notranslate"><span class="pre">-pass</span></code> will be used for the failover pool too)</p>
+</dd>
+<dt>-worker2 &lt;name&gt;</dt><dd><p>Failover ethash worker name (if missing <code class="docutils literal notranslate"><span class="pre">-worker</span></code> will be used for the failover pool too)</p>
+</dd>
+<dt>-proto2 &lt;n&gt;</dt><dd><p>Failover ethash stratum protocol (if missing <code class="docutils literal notranslate"><span class="pre">-proto</span></code> will be used for the failover pool too)</p>
+</dd>
+<dt>-coin2 &lt;coin&gt;</dt><dd><p>Failover devfee Ethash coin (if missing <code class="docutils literal notranslate"><span class="pre">-coin</span></code> will be used for the failover pool too)</p>
+</dd>
+<dt>-stales2 &lt;n&gt;</dt><dd><p>Submit stales to the failover pool: 1 - yes (default), 0 - no</p>
+</dd>
+<dt>-dpool &lt;host:port&gt;</dt><dd><p>Dual mining pool address</p>
+</dd>
+<dt>-dwal &lt;wallet&gt;</dt><dd><p>Dual mining wallet</p>
+</dd>
+<dt>-dpass &lt;password&gt;</dt><dd><p>Dual mining pool password (most pools don’t require it, use <code class="docutils literal notranslate"><span class="pre">x</span></code> as password if unsure)</p>
+</dd>
+<dt>-dworker &lt;name&gt;</dt><dd><p>Dual mining worker name</p>
+</dd>
+<dt>-dcoin blake2s</dt><dd><p>Currently only the Blake2s algorithm is supported for dual mining. If you want to put all dual mining pools in <code class="docutils literal notranslate"><span class="pre">dpools.txt</span></code>, you need to set <code class="docutils literal notranslate"><span class="pre">-dcoin</span> <span class="pre">blake2s</span></code> in the command-line or in config.txt to force the miner to load the dual mining pools from <code class="docutils literal notranslate"><span class="pre">dpools.txt</span></code></p>
+</dd>
+<dt>-dstales &lt;n&gt;</dt><dd><p>Submit stales to the dual mining pool: 1 - yes (default), 0 - no</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="general-pool-options">
+<h2>General pool options<a class="headerlink" href="#general-pool-options" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>-fret &lt;n&gt;</dt><dd><p>Switch to next pool afer N failed connection attempts (default: 3)</p>
+</dd>
+<dt>-ftimeout &lt;n&gt;</dt><dd><p>Reconnect if no new ethash job is receved for n seconds (default: 600)</p>
+</dd>
+<dt>-ptimeout &lt;n&gt;</dt><dd><p>Switch back to primary pool after n minutes. This setting is 30 minutes by default; set to 0 to disable automatic switch back to primary pool.</p>
+</dd>
+<dt>-retrydelay &lt;n&gt;</dt><dd><p>Seconds to wait before reconnecting (default: 5)</p>
+</dd>
+<dt>-gwtime &lt;n&gt;</dt><dd><p>Recheck period for Solo/GetWork mining (default: 200 ms)</p>
+</dd>
+<dt>-rate &lt;n&gt;</dt><dd><p>Report hashrate to the pool: 1 - yes, 0 - no (1 is the default), 2 - (for solo mining only) use alternative name of the report method <code class="docutils literal notranslate"><span class="pre">eth_submitHashRate</span></code> instead of <code class="docutils literal notranslate"><span class="pre">eth_submitHashrate</span></code></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="benchmark-mode">
+<h2>Benchmark mode<a class="headerlink" href="#benchmark-mode" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>-bench [&lt;n&gt;],-benchmark [&lt;n&gt;]</dt><dd><p>Benchmark mode, optionally specify DAG epoch. Use this to test your rig. If you specify only the <code class="docutils literal notranslate"><span class="pre">-bench</span></code> option, you will benchmark the ethash algorithm. If you want to bench the dual mining, use the options <code class="docutils literal notranslate"><span class="pre">-bench</span> <span class="pre">&lt;n&gt;</span> <span class="pre">-dcoin</span> <span class="pre">blake2s</span></code>. If you want to benchmark the ProgPOW BCI algorithm, use the options <code class="docutils literal notranslate"><span class="pre">-bench</span> <span class="pre">&lt;n&gt;</span> <span class="pre">-coin</span> <span class="pre">bci</span></code></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="remote-control-options">
+<h2>Remote control options<a class="headerlink" href="#remote-control-options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>-cdm &lt;n&gt;</dt><dd><p>Selects the level of support of the CDM remote monitoring:</p>
+<dl class="field-list simple">
+<dt class="field-odd">0</dt>
+<dd class="field-odd"><p>disabled</p>
+</dd>
+<dt class="field-even">1</dt>
+<dd class="field-even"><p>read-only - this is the default</p>
+</dd>
+<dt class="field-odd">2</dt>
+<dd class="field-odd"><p>full (only use on secure connections)</p>
+</dd>
+</dl>
+</dd>
+<dt>-cdmport &lt;port&gt;</dt><dd><p>Set the CDM remote monitoring port (default is 3333). You can also specify &lt;ip_addr:port&gt; if you have a secure VPN connection and want to bind the CDM port to it</p>
+</dd>
+<dt>-cdmpass &lt;pass&gt;</dt><dd><p>Set the CDM remote monitoring password</p>
+</dd>
+<dt>-cdmrs</dt><dd><p>Reload the settings if <code class="docutils literal notranslate"><span class="pre">config.txt</span></code> is edited/uploaded remotely. Note that most options require restart in order to change.</p>
+<p>Currently the following options can be changed without restarting: <code class="docutils literal notranslate"><span class="pre">-mi</span></code>, <code class="docutils literal notranslate"><span class="pre">-gt</span></code>, <code class="docutils literal notranslate"><span class="pre">-sci</span></code>, <code class="docutils literal notranslate"><span class="pre">-clf</span></code>, <code class="docutils literal notranslate"><span class="pre">-nvf</span></code>, <code class="docutils literal notranslate"><span class="pre">-gpow</span></code>, and most of the hardware control parameters (<code class="docutils literal notranslate"><span class="pre">-tt</span></code>, <code class="docutils literal notranslate"><span class="pre">-fcm</span></code>, <code class="docutils literal notranslate"><span class="pre">-fanmin</span></code>, <code class="docutils literal notranslate"><span class="pre">-fanmax</span></code>, <code class="docutils literal notranslate"><span class="pre">-powlim</span></code>, <code class="docutils literal notranslate"><span class="pre">-tmax</span></code>, <code class="docutils literal notranslate"><span class="pre">-ttli</span></code>, <code class="docutils literal notranslate"><span class="pre">-cclock</span></code>, <code class="docutils literal notranslate"><span class="pre">-cvddc</span></code>, <code class="docutils literal notranslate"><span class="pre">-mclock</span></code>, <code class="docutils literal notranslate"><span class="pre">-mvddc</span></code>, <code class="docutils literal notranslate"><span class="pre">-ppf</span></code>, <code class="docutils literal notranslate"><span class="pre">-straps</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmt1</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmt2</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmt3</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmr</span></code>).</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="mining-options">
+<h2>Mining options<a class="headerlink" href="#mining-options" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>-amd</dt><dd><p>Use only AMD cards</p>
+</dd>
+<dt>-acm</dt><dd><p>Turn on AMD compute mode on the supported GPUs. This is equivalent of pressing <code class="docutils literal notranslate"><span class="pre">y</span></code> in the miner console.</p>
+</dd>
+<dt>-nvidia</dt><dd><p>Use only Nvidia cards</p>
+</dd>
+<dt>-gpus &lt;123 ..n&gt;</dt><dd><p>Use only the specified GPUs (if more than 10, separate the indexes with comma)</p>
+</dd>
+<dt>-mi &lt;n&gt;</dt><dd><p>Set the mining intensity (0 to 14; 12 is the default for new kernels). You may specify this option per-GPU.</p>
+</dd>
+<dt>-gt &lt;n&gt;</dt><dd><p>Set the GPU tuning parameter (6 to 400). The default is 15. You can change the tuning parameter interactively with the <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">-</span></code> keys in the miner’s console window. You may specify this option per-GPU. If you don’t specify <code class="docutils literal notranslate"><span class="pre">-gt</span></code> or you specify value 0, the miner will use auto-tuning to determine the best GT value. Note that when the GPU is dual-mining, it ignores the <code class="docutils literal notranslate"><span class="pre">-gt</span></code> values, and uses <code class="docutils literal notranslate"><span class="pre">-sci</span></code> instead.</p>
+</dd>
+<dt>-sci &lt;n&gt;</dt><dd><p>Set the dual mining intensity (1 to 1000). The default is 30. As you increase the value of <code class="docutils literal notranslate"><span class="pre">-sci</span></code>, the secondary coin hashrate will increase but the price will be higher power consumption and/or lower ethash hashrate. You can change the this parameter interactively with the <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">-</span></code> keys in the miner’s console window. You may specify this option per-GPU. If you set <code class="docutils literal notranslate"><span class="pre">-sci</span></code> to 0, the miner will use auto-tuning to determine the best value, while trying to maximize the ethash hashrate regardless of the secondary coin hashrate.</p>
+</dd>
+<dt>-clKernel &lt;n&gt;</dt><dd><p>Type of OpenCL kernel: 0 - generic, 1 - optimized, 2 - alternative, 3 - turbo (1 is the default) You may specify this option per-GPU.</p>
+</dd>
+<dt>-clgreen &lt;n&gt;</dt><dd><p>Use the power-efficient (“green”) kernels (0: no, 1: yes; default: 0). You may specify this option per-GPU. Note that you have to run auto-tune again as the optimal GT values are completely different for the green kernels</p>
+</dd>
+<dt>-clNew &lt;n&gt;</dt><dd><p>Use new AMD kernels if supported (0: no, 1: yes; default: 1). You may specify this option per-GPU.</p>
+</dd>
+<dt>-clf &lt;n&gt;</dt><dd><p>AMD kernel sync (0: never, 1: periodic; 2: always; default: 1). You may specify this option per-GPU.</p>
+</dd>
+<dt>-nvKernel &lt;n&gt;</dt><dd><p>Type of Nvidia kernel: 0 auto (default), 1 old (v1), 2 newer (v2), 3 latest (v3). Note that v3 kernels are only supported on GTX10x0 GPUs. Also note that dual mining is supported only by v2 kernels. You may specify this option per-GPU.</p>
+</dd>
+<dt>-nvdo &lt;n&gt;</dt><dd><p>Enable Nvidia driver-specific optimizations (0 - no, the default; 1 - yes). Try <code class="docutils literal notranslate"><span class="pre">-nvdo</span> <span class="pre">1</span></code> if your are unstable. You may specify this option per-GPU.</p>
+</dd>
+<dt>-nvNew &lt;n&gt;</dt><dd><p>Use new Nvidia kernels if supported (0: no, 1: yes; default: 1). You may specify this option per-GPU.</p>
+</dd>
+<dt>-nvf &lt;n&gt;</dt><dd><p>Nvidia kernel sync (0: never, 1: periodic; 2: always; 3: forced; default: 1). You may specify this option per-GPU.</p>
+</dd>
+<dt>-mode &lt;n&gt;</dt><dd><p>Mining mode (0: dual mining if dual pool(s) are specified; 1: ethash only even if dual pools are specified). You may specify this option per-GPU.</p>
+</dd>
+<dt>-gbase &lt;n&gt;</dt><dd><p>Set the index of the first GPU (0 or 1, default: 1)</p>
+</dd>
+<dt>-minRigSpeed &lt;n&gt;</dt><dd><p>Restart the miner if avg 5 min speed is below &lt;n&gt; MH/s</p>
+</dd>
+<dt>-eres &lt;n&gt;</dt><dd><p>Allocate DAG buffers big enough for n epochs ahead (default: 2) to avoid allocating new buffers on each DAG epoch switch, which should improve DAG switch stability. You may specify this option per-GPU.</p>
+</dd>
+<dt>-daglim &lt;n&gt;</dt><dd><p>(AMD Polaris, Baffin, Tonga, or Fiji cards only) Limit the DAG size to &lt;n&gt; MB to allow mining on 4 GB cards a few weeks after epoch 373 on Windows (or 381 on Linux). The possible values except the exact DAG limit are also 0 (turn off the DAG limit), 1 (automatic DAG limit size, usually 4023 MB under Windows; this is the default). Note that the hashrate will drop significantly with each epoch after the DAG limit is in effect. If the hashrate drops too much (e.g. from 28 MH/s to just
+2-3 MH/s, you need to use lower value, for example <code class="docutils literal notranslate"><span class="pre">-daglim</span> <span class="pre">3996</span></code> or even lower.</p>
+</dd>
+<dt>-dagrestart &lt;n&gt;</dt><dd><p>Restart the miner when allocating buffer for a new DAG epoch. The possible values are: 0 - never, 1 - always, 2 - auto (the miner decides depending on the driver version). This is relevant for 4 GB AMD cards, which may have problems with new DAG epochs after epoch 350.</p>
+</dd>
+<dt>-lidag &lt;n&gt;</dt><dd><p>Slow down DAG generation to avoid crashes when switching DAG epochs (0-3, default: 0 - fastest, 3 - slowest). You may specify this option per-GPU.</p>
+</dd>
+<dt>-gser &lt;n&gt;</dt><dd><p>Serializing DAG creation on multiple GPUs (0 - no serializing, all GPUs generate the DAG simultaneously, this is the default; 1 - partial overlap of DAG generation on each GPU; 2 - no overlap (each GPU waits until the previous one has finished generating the DAG); 3-10 - from 1 to 8 seconds delay after each GPU DAG generation before the next one)</p>
+</dd>
+<dt>-gpureset &lt;n&gt;</dt><dd><p>Fully reset GPU when paused (0 - no, 1 - yes; default: no, except on 1080Ti). You may specify this option per-GPU.</p>
+</dd>
+<dt>-rvram &lt;n&gt;</dt><dd><p>Minimum free VRAM in MB (-1: don’t check; default: 384 for Windows, and 128 for Linux)</p>
+</dd>
+<dt>-altinit</dt><dd><p>Use alternative way to initialize AMD cards to prevent startup crashes</p>
+</dd>
+<dt>-wdog &lt;n&gt;</dt><dd><p>Enable watchdog timer: 1 - yes, 0 - no (1 is the default). The watchdog timer checks periodically if any of the GPUs freezes and if it does, restarts the miner (see the <code class="docutils literal notranslate"><span class="pre">-rmode</span></code> command-line parameter for the restart modes)</p>
+</dd>
+<dt>-wdtimeout &lt;n&gt;</dt><dd><p>Watchdog timeout (30 - 300; default 45 seconds). You can use this parameter to increase the default watchdog timeout in case it restarts the miner needlessly</p>
+</dd>
+<dt>-rmode &lt;n&gt;</dt><dd><p>Selects the restart mode when a GPU crashes or freezes:
+:0: disabled - miner will shut down instead of restarting
+:1: restart with the same command line options - this is the default
+:2: reboot (shut down miner and execute <code class="docutils literal notranslate"><span class="pre">reboot.bat</span></code>)</p>
+</dd>
+<dt>-log &lt;n&gt;</dt><dd><p>Selects the log file mode:
+:0: disabled - no log file will be written
+:1: write log file but don’t show debug messages on screen (default)
+:2: write log file and show debug messages on screen</p>
+</dd>
+<dt>-logfile &lt;name&gt;</dt><dd><p>Set the name of the logfile. If you place an asterisk (*) in the logfile name, it will be replaced by the current date/time to create a unique name every time PhoenixMiner is started. If there is no asterisk in the logfile name, the new log entries will be added to end of the same file. If you want to use the same logfile but the contents to be overwritten every time when you start the miner, put a dollar sign ($) character in the logfile name (e.g. <code class="docutils literal notranslate"><span class="pre">-logfile</span> <span class="pre">my_log.txt$</span></code>).</p>
+</dd>
+<dt>-logdir &lt;path&gt;</dt><dd><p>Set a path where the logfile(s) will be created</p>
+</dd>
+<dt>-logsmaxsize &lt;n&gt;</dt><dd><p>Maximum size of the logfiles in MB. The default is 200 MB (use 0 to turn off the limitation). On startup, if the logfiles are larger than the specified limit, the oldest are deleted. If you use a single logfile (by using <code class="docutils literal notranslate"><span class="pre">-logfile</span></code>), then it is truncated if it is bigger than the limit and a new one is created.</p>
+</dd>
+<dt>-config &lt;name&gt;</dt><dd><p>Load a file with configuration options that will be added to the command-line options. Note that the order is important.</p>
+<p>For example, if we have a <code class="docutils literal notranslate"><span class="pre">config.txt</span></code> file that contains <code class="docutils literal notranslate"><span class="pre">-cclock</span> <span class="pre">1000</span></code> and we specify command line <code class="docutils literal notranslate"><span class="pre">-cclock</span> <span class="pre">1100</span> <span class="pre">-config</span> <span class="pre">config.txt</span></code>, the options from the <code class="docutils literal notranslate"><span class="pre">config.txt</span></code> file will take precedence and the resulting -cclock will be 1000. If the order is reversed (<code class="docutils literal notranslate"><span class="pre">-config</span> <span class="pre">config.txt</span> <span class="pre">-cclock</span> <span class="pre">1100</span></code>) then the second option takes precedence and the resulting -cclock will be 1100.</p>
+<p>Note that only one <code class="docutils literal notranslate"><span class="pre">-config</span></code> option is allowed. Also note that if you reload the config file with <code class="docutils literal notranslate"><span class="pre">c</span></code> key or with the remote interface, its options will take precedence over whatever you have specified in the command-line.</p>
+</dd>
+<dt>-timeout &lt;n&gt;</dt><dd><p>Restart miner according to -rmode after n minutes</p>
+</dd>
+<dt>-pauseat &lt;hh:mm&gt;</dt><dd><p>Pause the miner at hh:mm (24 hours time). You can specify multiple times: <code class="docutils literal notranslate"><span class="pre">-pauseat</span> <span class="pre">6:00,12:00</span></code></p>
+</dd>
+<dt>-resumeat &lt;hh:mm&gt;</dt><dd><p>Resume the miner at hh::mm (24 hours time). You can specify multiple times: <code class="docutils literal notranslate"><span class="pre">-resumeat</span> <span class="pre">8:00,22:00</span></code></p>
+</dd>
+<dt>-gswin &lt;n&gt;</dt><dd><p>GPU stats time window (5-30 sec; default: 15; use 0 to revert to pre-2.8 way of showing momentary stats)</p>
+</dd>
+<dt>-gsi &lt;n&gt;</dt><dd><p>Speed stats interval (5-30 sec; default: 5; use 0 to disable). The detailed stats are still shown every 45 seconds and aren’t affected by the <code class="docutils literal notranslate"><span class="pre">-gsi</span></code> value</p>
+</dd>
+<dt>-astats &lt;n&gt;</dt><dd><p>Show advanced stats from Web sources (0: no; 1: yes). By default the coin exchange rates are updated every 4 hours, and the coin difficulty is updated every 8 hours. You can increase these periods by specifying for example <code class="docutils literal notranslate"><span class="pre">-astats</span> <span class="pre">12</span></code>, which will increase update periods to 12 and 24 hours respectively</p>
+</dd>
+<dt>-gpow &lt;n&gt;</dt><dd><p>Lower the GPU usage to n% of maximum (default: 100). If you already use <code class="docutils literal notranslate"><span class="pre">-mi</span> <span class="pre">0</span></code> (or other low value) use <code class="docutils literal notranslate"><span class="pre">-li</span></code> instead. You may specify this option per-GPU.</p>
+</dd>
+<dt>-li &lt;n&gt;</dt><dd><p>Another way to lower the GPU usage. Bigger n values mean less GPU utilization; the default is 0. You may specify this option per-GPU.</p>
+</dd>
+<dt>-resetoc</dt><dd><p>Reset the HW overclocking settings on startup</p>
+</dd>
+<dt>-leaveoc</dt><dd><p>Do not reset overclocking settings when closing the miner</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="hardware-control-options-you-may-specify-these-options-per-gpu">
+<h2>Hardware control options (you may specify these options per-GPU)<a class="headerlink" href="#hardware-control-options-you-may-specify-these-options-per-gpu" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>-tt &lt;n&gt;</dt><dd><p>Set fan control target temperature (special values: 0 - no HW monitoring on ALL cards, 1-4 - only monitoring on all cards with 30-120 seconds interval, negative - fixed fan speed at n %)</p>
+</dd>
+<dt>-hstats &lt;n&gt;</dt><dd><p>Level of hardware monitoring: 0 - temperature and fan speed only; 1 - temperature, fan speed, and power; 2 - full (include core/memory clocks, voltages, P-states). The default is 1.</p>
+</dd>
+<dt>-pidle &lt;n&gt;</dt><dd><p>Idle power consumption of the rig in W. Will be added to the GPU power consumption when calculating the total power consumption of the rig.</p>
+</dd>
+<dt>-ppf &lt;n&gt;</dt><dd><p>The power usage of each GPU will be multiplied by this value to get the actual usage. This value is in percent, so for example if the GPU reports 100 W power usage and you have specified -ppf 106 the GPU power usage will be calculated to be 100 * (106 / 100) = 106 W. This allows you to correct for the efficiency of the PSUs and the individual GPUs. You can also specify this value for each GPU separately.</p>
+</dd>
+<dt>-prate &lt;n&gt;</dt><dd><p>Price of the electricity in USD per kWh (e.g. <code class="docutils literal notranslate"><span class="pre">-prate</span> <span class="pre">0.1</span></code>). If specified the miner will calculate the rig daily electricity cost</p>
+</dd>
+<dt>-fanmin &lt;n&gt;</dt><dd><p>Set fan control min speed in % (-1 for default)</p>
+</dd>
+<dt>-fanmax &lt;n&gt;</dt><dd><p>Set fan control max speed in % (-1 for default)</p>
+</dd>
+<dt>-fcm &lt;n&gt;</dt><dd><p>Set fan control mode (0 - auto, 1 - use VBIOS fan control, 2 - forced fan control; default: 0)</p>
+</dd>
+<dt>-fanidle &lt;n&gt;</dt><dd><p>(<em>Linux only</em>) Set idle fan speed in % (-1 is auto, the default is 20)</p>
+</dd>
+<dt>-fpwm &lt;n&gt;</dt><dd><p>(<em>Linux only</em>) Fan PWM mode (0 - auto, 1 - direct, 2 - Polaris, 3 - Vega, 4 - Radeon VII, Navi; default: 0)</p>
+</dd>
+<dt>-tmax &lt;n&gt;</dt><dd><p>Set fan control max temperature (0 for default)</p>
+</dd>
+<dt>-powlim &lt;n&gt;</dt><dd><p>Set GPU power limit in % (from -75 to 75, 0 for default)</p>
+</dd>
+<dt>-cclock &lt;n&gt;</dt><dd><p>Set GPU core clock in MHz (0 for default). For Nvidia cards use relative values (e.g. -300 or +400)</p>
+</dd>
+<dt>-cvddc &lt;n&gt;</dt><dd><p>Set GPU core voltage in mV (0 for default)</p>
+</dd>
+<dt>-mclock &lt;n&gt;</dt><dd><p>Set GPU memory clock in MHz (0 for default). For Nvidia cards use relative values (e.g. -300 or +400)</p>
+</dd>
+<dt>-mvddc &lt;n&gt;</dt><dd><p>Set GPU memory voltage in mV (0 for default)</p>
+</dd>
+<dt>-tstop &lt;n&gt;</dt><dd><p>Pause a GPU when temp is &gt;= n deg C (0 for default; i.e. off)</p>
+</dd>
+<dt>-tstart &lt;n&gt;</dt><dd><p>Resume a GPU when temp is &lt;= n deg C (0 for default; i.e. off)</p>
+</dd>
+<dt>-mt &lt;n&gt;</dt><dd><p>VRAM timings (AMD under Windows only): 0 - default VBIOS values; 1 - faster timings; 2 - fastest timings. The default is 0. This is useful for mining with AMD cards without modding the VBIOS.</p>
+</dd>
+<dt>-leavemt</dt><dd><p>Do not reset memory timing level (<code class="docutils literal notranslate"><span class="pre">-mt</span></code>) to 0 when closing</p>
+</dd>
+<dt>-ttli &lt;n&gt;</dt><dd><p>Lower GPU usage when GPU temperature is above n deg C. The default value is 0, which means do not lower the usage regardless of the GPU temperature. This option is useful whenever -tmax is not working. If you are using both <code class="docutils literal notranslate"><span class="pre">-tt</span></code> and <code class="docutils literal notranslate"><span class="pre">-ttli</span></code> options, the temperature in <code class="docutils literal notranslate"><span class="pre">-tt</span></code> should be lower than the <code class="docutils literal notranslate"><span class="pre">-ttli</span></code> to avoid throttling the GPUs without using the fans to properly cool them first.</p>
+</dd>
+<dt>-straps &lt;n&gt;</dt><dd><p>Memory strap level (Nvidia cards 10x0 series only). The possible values are 0 to 6. 0 is the default value and uses the default timings from the VBIOS. Each strap level corresponds to a predefined combination of memory timings (<code class="docutils literal notranslate"><span class="pre">-vmt1</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmt2</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmt3</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmr</span></code>). Strap level 3 is the fastest predefined level and may not work on most cards, 1 is the slowest (but still faster than the default timings). Strap levels 4 to 6 are the same as 1 to 3 but with less aggressive refresh rates (i.e. lower <code class="docutils literal notranslate"><span class="pre">-vmr</span></code> values).</p>
+</dd>
+<dt>-straps &lt;n&gt;</dt><dd><p>Memory strap level (AMD Vega cards only). The possible values are 0 to 5. 0 is the default value and uses the default timings from the VBIOS. Each strap level corresponds to a predefined combination of memory timings. Strap level 5 is
+the fastest level and may not work on most cards, 1 is the slowest (but still faster than the default timings). Note that straps for AMD cards are experimental and may lead to crashes or instability. <code class="docutils literal notranslate"><span class="pre">-vmt1</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmt2</span></code>, and <code class="docutils literal notranslate"><span class="pre">-vmt3</span></code> parameters
+have no effect on AMD cards</p>
+</dd>
+<dt>-vmt1 &lt;n&gt;</dt><dd><p>Memory timing parameter 1 (0 to 100, default 0)</p>
+</dd>
+<dt>-vmt2 &lt;n&gt;</dt><dd><p>Memory timing parameter 2 (0 to 100, default 0)</p>
+</dd>
+<dt>-vmt3 &lt;n&gt;</dt><dd><p>Memory timing parameter 3 (0 to 100, default 0)</p>
+</dd>
+<dt>-vmr &lt;n&gt;</dt><dd><p>Memory refresh rate (0 to 100, default 0). For AMD cards you may also use <code class="docutils literal notranslate"><span class="pre">-rxboost</span></code></p>
+</dd>
+<dt>-nvmem &lt;n&gt;</dt><dd><p>Force using straps on unsupported Nvidia GPUs (0 - do not force, 1 - GDDR5, 2 - GDDR5X). Make sure that the parameter matches your GPU memory type. You can try this if your card is Pascal-based but when you try to use <code class="docutils literal notranslate"><span class="pre">-straps</span></code> or any other memory timing option, the card is shown as “unsupported”.</p>
+</dd>
+<dt>-rxboost &lt;n&gt;</dt><dd><p>Memory refresh rate on AMD cards (0 - default values, 1 - predefined value that should work on most cards, 2 to 100 - increasingly aggressive settings). If you want to fine tune the value, you may run
+the miner with <code class="docutils literal notranslate"><span class="pre">-rxboost</span> <span class="pre">1</span></code>, write down the corresponding <code class="docutils literal notranslate"><span class="pre">-vmr</span></code> values that are showed in the log file, and then use <code class="docutils literal notranslate"><span class="pre">-vmr</span></code> instead with adjusted values.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="general-options">
+<h2>General Options<a class="headerlink" href="#general-options" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>-list</dt><dd><p>List the detected GPUs devices and exit</p>
+</dd>
+<dt>-v,–version</dt><dd><p>Show the version and exit</p>
+</dd>
+<dt>-vs</dt><dd><p>Show short version string (e.g. <code class="docutils literal notranslate"><span class="pre">4.1c</span></code>) and exit</p>
+</dd>
+<dt>-h,–help</dt><dd><p>Show information about the command-line options and exit</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="per-gpu-options">
+<h2>Per-GPU options<a class="headerlink" href="#per-gpu-options" title="Permalink to this headline">¶</a></h2>
+<p>Some of the PhoenixMiner options can provide either the same setting for all GPUs, or a different
+setting for each of the GPUs. For example, to specify the <code class="docutils literal notranslate"><span class="pre">-gt</span></code> value for all cards you would write
+<code class="docutils literal notranslate"><span class="pre">-gt</span> <span class="pre">90</span></code> but if you want to specify a different GT value for each of the cards, use something like this:
+<code class="docutils literal notranslate"><span class="pre">-gt</span> <span class="pre">20,15,40,90,90</span></code> for a five-GPU mining rig. This would set GT to 20 for the first GPU, 15 for the second
+GPU, and so on. If you specify less values than you have GPUs, the rest of the GPUs will use the default
+value for the parameter.</p>
+<p>You can also use another, more flexible way of specifying different values for the different cards.
+This is best explained by example: <code class="docutils literal notranslate"><span class="pre">-cclock</span> <span class="pre">*:1100,1-3:1090,4:1300</span></code> - here we are setting core clock
+to 1100 MHz for all cards, except the cards 1 to 3, on which it is set to 1090 MHz, and card 4 to 1300 MHz.</p>
+<p>The part before the colon (:) is the selector, which selects the GPUs for which the value after the colon is applied. The selector can be:</p>
+<ul class="simple">
+<li><p>single GPU index: e.g. <code class="docutils literal notranslate"><span class="pre">5:1000</span></code> sets 1000 for the 5th GPU</p></li>
+<li><p>range of GPU indexes: e.g <code class="docutils literal notranslate"><span class="pre">2-5:1200</span></code> sets 1200 for the GPUs 2,3,4, and 5</p></li>
+<li><p>asterisk, which sets the value for all GPUs</p></li>
+<li><p>label <code class="docutils literal notranslate"><span class="pre">amd</span></code> or <code class="docutils literal notranslate"><span class="pre">nvidia</span></code>: e.g. <code class="docutils literal notranslate"><span class="pre">amd:1090</span></code> sets the value to 1090 for all AMD cards</p></li>
+<li><p>arbitrary string that starts with letter and can contain letters, numbers and asterisks,
+which is matched with the GPU name as listed by PhoenixMiner. Example: <code class="docutils literal notranslate"><span class="pre">gtx*1070:+500</span></code> will
+set value +500 for all cards which contain ‘gtx’ and ‘1070’ in their names with anything
+between them. This will match ‘Nvidia GeForce GTX 1070’ but not ‘Nvidia GeForce 1070’.</p></li>
+</ul>
+<p>Note that if more than one selector matches given card, than only the last one counts.
+Example: <code class="docutils literal notranslate"><span class="pre">-cclock</span> <span class="pre">*:1100,1-4:1090,2:1300</span></code> will set card 2 to 1300; cards 1,3, and 4 to 1090;
+and the rest of the cards to 1100 MHz core clock.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="interactive.html" class="btn btn-neutral float-right" title="Interactive console commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="features.html" class="btn btn-neutral float-left" title="Features, requirements, and limitations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Phoenix
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

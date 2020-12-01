@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quick start &mdash; PhoenixMiner 5.3b documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Features, requirements, and limitations" href="features.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PhoenixMiner
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download-and-install">Download and install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ethash-mining-command-line-examples">Ethash mining command-line examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dual-mining-command-line-examples">Dual-mining command-line examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#progpow-command-line-examples">ProgPOW command-line examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features, requirements, and limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Command-line arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#pool-options">Pool options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#general-pool-options">General pool options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#benchmark-mode">Benchmark mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#remote-control-options">Remote control options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#mining-options">Mining options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#hardware-control-options-you-may-specify-these-options-per-gpu">Hardware control options (you may specify these options per-GPU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#general-options">General Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#per-gpu-options">Per-GPU options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interactive.html">Interactive console commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config-files.html">Configuration files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote.html">Remote monitoring and management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw-control.html">Hardware control options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PhoenixMiner</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Quick start</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quick-start">
+<h1>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="download-and-install">
+<h2>Download and install<a class="headerlink" href="#download-and-install" title="Permalink to this headline">¶</a></h2>
+<p>You can download PhoenixMiner 5.3b from here:</p>
+<p><a class="reference external" href="https://mega.nz/#F!2VskDJrI!lsQsz1CdDe8x5cH3L8QaBw">https://mega.nz/#F!2VskDJrI!lsQsz1CdDe8x5cH3L8QaBw</a> (MEGA)</p>
+<p>Note that you need the file <code class="docutils literal notranslate"><span class="pre">PhoenixMiner_NVRTC_Windows.zip</span></code> only if you want to mine BCI with Nvdia cards under Windows.</p>
+<p>If you want to check the integrity of the downloaded file, you can use the hashes (checksums) that are provided in our bitcointalk.org thread (<a class="reference external" href="https://bitcointalk.org/index.php?topic=2647654.0">https://bitcointalk.org/index.php?topic=2647654.0</a>) or the file <code class="docutils literal notranslate"><span class="pre">PhoenixMiner_5.3b_checksums.txt</span></code> which is in the same MEGA folder as the main PhoenixMiner archive.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Linux:</strong> Under Linux you need to replace <code class="docutils literal notranslate"><span class="pre">PhoenixMiner.exe</span></code> with <code class="docutils literal notranslate"><span class="pre">./PhoenixMiner</span></code> in the command-line examples below.</p>
+</div>
+</div>
+<div class="section" id="ethash-mining-command-line-examples">
+<h2>Ethash mining command-line examples<a class="headerlink" href="#ethash-mining-command-line-examples" title="Permalink to this headline">¶</a></h2>
+<p>Here are the command line parameters for some of the more popular pools and coins:</p>
+<dl>
+<dt>ethermine.org (ETH):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool eu1.ethermine.org:4444 -pool2 us1.ethermine.org:4444 -wal YourEthWalletAddress.WorkerName -proto <span class="m">3</span>
+</pre></div>
+</div>
+</dd>
+<dt>ethermine.org (ETH, secure connection):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool ssl://eu1.ethermine.org:5555 -pool2 ssl://us1.ethermine.org:5555 -wal YourEthWalletAddress.WorkerName -proto <span class="m">3</span>
+</pre></div>
+</div>
+</dd>
+<dt>ethpool.org (ETH):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool eu1.ethpool.org:3333 -pool2 us1.ethpool.org:3333 -wal YourEthWalletAddress.WorkerName -proto <span class="m">3</span>
+</pre></div>
+</div>
+</dd>
+<dt>nanopool.org (ETH):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool eth-eu1.nanopool.org:9999 -wal YourEthWalletAddress/WorkerName -pass x
+</pre></div>
+</div>
+</dd>
+<dt>nicehash (ethash):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool stratum+tcp://daggerhashimoto.eu.nicehash.com:3353 -wal YourBtcWalletAddress -pass x -proto <span class="m">4</span> -stales <span class="m">0</span>
+</pre></div>
+</div>
+</dd>
+<dt>f2pool (ETH):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -epool eth.f2pool.com:8008 -ewal YourEthWalletAddress -pass x -worker WorkerName
+</pre></div>
+</div>
+</dd>
+<dt>miningpoolhub (ETH):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool us-east.ethash-hub.miningpoolhub.com:20535 -wal YourLoginName.WorkerName -pass x -proto <span class="m">1</span>
+</pre></div>
+</div>
+</dd>
+<dt>coinotron.com (ETH):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool coinotron.com:3344 -wal YourLoginName.WorkerName -pass x -proto <span class="m">1</span>
+</pre></div>
+</div>
+</dd>
+<dt>ethermine.org (ETC):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool eu1-etc.ethermine.org:4444 -wal YourEtcWalletAddress.WorkerName -coin etc
+</pre></div>
+</div>
+</dd>
+<dt>epool.io (ETC):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool eu.etc.epool.io:8008 -pool2 us.etc.epool.io:8008 -worker WorkerName -wal YourEtcWalletAddress -pass x -retrydelay <span class="m">2</span> -coin etc
+</pre></div>
+</div>
+</dd>
+<dt>whalesburg.com (ethash auto-switching):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool proxy.pool.whalesburg.com:8082 -wal YourEthWalletAddress -worker WorkerName -proto <span class="m">2</span>
+</pre></div>
+</div>
+</dd>
+<dt>miningpoolhub (EXP):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool us-east.ethash-hub.miningpoolhub.com:20565 -wal YourLoginName.WorkerName -pass x -proto <span class="m">1</span>
+</pre></div>
+</div>
+</dd>
+<dt>miningpoolhub (MUSIC):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool europe.ethash-hub.miningpoolhub.com:20585 -wal YourLoginName.WorkerName -pass x -proto <span class="m">1</span>
+</pre></div>
+</div>
+</dd>
+<dt>maxhash.org (UBIQ):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool ubiq-us.maxhash.org:10008 -wal YourUbqWalletAddress -worker WorkerName -coin ubq
+</pre></div>
+</div>
+</dd>
+<dt>ubiq.minerpool.net (UBIQ):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool lb.geo.ubiqpool.org:8001 -wal YourUbqWalletAddress -pass x -worker WorkerName -coin ubq
+</pre></div>
+</div>
+</dd>
+<dt>ubiqpool.io (UBIQ):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool eu2.ubiqpool.io:8008 -wal YourUbqWalletAddress.WorkerName -pass x -proto <span class="m">4</span> -coin ubq
+</pre></div>
+</div>
+</dd>
+<dt>minerpool.net (PIRL):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool pirl.minerpool.net:8002 -wal YourPirlWalletAddress -pass x -worker WorkerName
+</pre></div>
+</div>
+</dd>
+<dt>etp.2miners.com (Metaverse ETP):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool etp.2miners.com:9292 -wal YourMetaverseETPWalletAddress -worker Rig1 -pass x
+</pre></div>
+</div>
+</dd>
+<dt>minerpool.net (Ellaism):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool ella.minerpool.net:8002 -wal YourEllaismWalletAddress -worker Rig1 -pass x
+</pre></div>
+</div>
+</dd>
+<dt>etherdig.net (ETH PPS):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool etherdig.net:4444 -wal YourEthWalletAddress.WorkerName -proto <span class="m">4</span> -pass x
+</pre></div>
+</div>
+</dd>
+<dt>etherdig.net (ETH HVPPS):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool etherdig.net:3333 -wal YourEthWalletAddress.WorkerName -proto <span class="m">4</span> -pass x
+</pre></div>
+</div>
+</dd>
+<dt>epool.io (CLO):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool eu.clo.epool.io:8008 -pool2 us.clo.epool.io:8008 -worker WorkerName -wal YourEthWalletAddress -pass x -coin clo -retrydelay <span class="m">2</span>
+</pre></div>
+</div>
+</dd>
+<dt>baikalmine.com (CLO):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool clo.baikalmine.com:3333 -wal YourEthWalletAddress -pass x -coin clo -worker rigName
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="dual-mining-command-line-examples">
+<h2>Dual-mining command-line examples<a class="headerlink" href="#dual-mining-command-line-examples" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>ETH on ethermine.org ETH, Blake2s on Nicehash:</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool ssl://eu1.ethermine.org:5555 -pool2 ssl://us1.ethermine.org:5555 -wal YourEthWalletAddress.WorkerName -proto <span class="m">3</span> -dpool blake2s.eu.nicehash.com:3361 -dwal YourBtcWalletAddress -dcoin blake2s
+</pre></div>
+</div>
+</dd>
+<dt>Nicehash (Ethash + Blake2s):</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool stratum+tcp://daggerhashimoto.eu.nicehash.com:3353 -wal YourBtcWalletAddress -pass x -proto <span class="m">4</span> -stales <span class="m">0</span> -dpool blake2s.eu.nicehash.com:3361 -dwal YourBtcWalletAddress -dcoin blake2s
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="progpow-command-line-examples">
+<h2>ProgPOW command-line examples<a class="headerlink" href="#progpow-command-line-examples" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>BCI on Suprnova.cc:</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PhoenixMiner.exe -pool bci.suprnova.cc:9166 -wal YourSupernovaLogin -coin bci
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="features.html" class="btn btn-neutral float-right" title="Features, requirements, and limitations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Phoenix
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hardware control options &mdash; PhoenixMiner 5.3b documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="FAQ" href="faq.html" />
+    <link rel="prev" title="Remote monitoring and management" href="remote.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PhoenixMiner
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#download-and-install">Download and install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#ethash-mining-command-line-examples">Ethash mining command-line examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#dual-mining-command-line-examples">Dual-mining command-line examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-start.html#progpow-command-line-examples">ProgPOW command-line examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features, requirements, and limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Command-line arguments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#pool-options">Pool options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#general-pool-options">General pool options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#benchmark-mode">Benchmark mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#remote-control-options">Remote control options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#mining-options">Mining options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#hardware-control-options-you-may-specify-these-options-per-gpu">Hardware control options (you may specify these options per-GPU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#general-options">General Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#per-gpu-options">Per-GPU options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interactive.html">Interactive console commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config-files.html">Configuration files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote.html">Remote monitoring and management</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hardware control options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PhoenixMiner</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Hardware control options</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hardware-control-options">
+<h1>Hardware control options<a class="headerlink" href="#hardware-control-options" title="Permalink to this headline">¶</a></h1>
+<p>Here are some important notes about the hardware control options:</p>
+<ul class="simple">
+<li><p>Most recent Nvidia drivers require running as administrator (or as root under Linux) to allow hardware control, so you must run
+PhoenixMiner as administrator for the VRAM timing options to work.</p></li>
+<li><p>The AMD memory timing options (<code class="docutils literal notranslate"><span class="pre">-rxboost</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmr</span></code>, <code class="docutils literal notranslate"><span class="pre">-straps</span></code>), with the notable exception of <code class="docutils literal notranslate"><span class="pre">-mt</span></code>, also require running as administrator
+(or as root under Linux)</p></li>
+<li><p>When using the VRAM timing options (<code class="docutils literal notranslate"><span class="pre">-straps</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmt1</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmt2</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmt3</span></code>, <code class="docutils literal notranslate"><span class="pre">-vmr</span></code>), start with lower values
+and make sure that the cards are stable before trying higher and more aggressive settings. You can use <code class="docutils literal notranslate"><span class="pre">-straps</span></code> along with
+the other options. For example <code class="docutils literal notranslate"><span class="pre">-straps</span> <span class="pre">1</span></code> <code class="docutils literal notranslate"><span class="pre">-vmt1</span> <span class="pre">60</span></code> will use the timings from 1st strap level but -vmt1 will be set to 60
+instead of whatever value is specified by the 1st strap level. In such case the <code class="docutils literal notranslate"><span class="pre">-straps</span></code> option must be specified first.</p></li>
+<li><p>Generally, the <code class="docutils literal notranslate"><span class="pre">-vmt3</span></code> option has little effect on the hashrate, so first try adjusting the other parameters.</p></li>
+<li><p>The VRAM timing options can be quite different between the GPUs, even when the GPUs are the same model. Therefore, you can
+(and probably should) specify the VRAM timing options per-GPU.</p></li>
+<li><p>If you specify a single value (e.g. <code class="docutils literal notranslate"><span class="pre">-cvddc</span> <span class="pre">1150</span></code>), it will be used on all cards. Specify different
+values for each card like this (separate with comma): <code class="docutils literal notranslate"><span class="pre">-cvddc</span> <span class="pre">1100,1100,1150,1120,1090</span></code>
+If the specified values are less than the number of GPUs, the rest of GPUs will use the default values.</p></li>
+<li><p>We have tested only on relatively recent AMD GPUs (RX460/470/480/560/570/580/590, Vega, Radeon VII, RX5700, RX5500).
+Your results may vary with older GPUs.</p></li>
+<li><p>The blockchain beta drivers from AMD show quite unstable results - often the voltages don’t stick at
+all or revert back to the default after some time. For best results use the newer drivers from AMD:
+18.5.1 or later, where most of the bugs are fixed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-tmax</span></code> specifies the temperature at which the GPU should start to throttle (because the fans can’t keep up).</p></li>
+<li><p>If you use other programs for hardware control, conflicts are possible and quite likely. Use something
+like GPU-Z to monitor the voltages, etc. MSI Afterburner also seems to behave OK (so you can use it to
+control the Nvidia cards while AMD cards are controller by PhoenixMiner).</p></li>
+<li><p>This should be obvious but still: if given clocks/voltages are causing crashes/freezes/incorrect shares
+when set with third-party program, they will be just as much unstable when set via PhoenixMiner hardware
+control options.</p></li>
+<li><p>If you have problems with hardware control options of PhoenixMiner and you were using something else to
+control clocks, fans, and voltages (MSI Aftrerburner, OverdriveNTool, etc.), which you were happy with,
+it is probably best to keep using it and ignore the hardware control options of PhoenixMiner (or use only
+some of them and continue tweaking the rest with your third-party tools).</p></li>
+<li><p>In order to have working hardware control under Linux, you need relatively recent kernel (4.15 or later),
+recent AMD drivers (we tested with 19.30-855429), PhoeniMiner must be running as root (<code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">./PhoenixMiner</span></code>),
+AND you need to add the following boot parameter to the Linux kernel: <code class="docutils literal notranslate"><span class="pre">amdgpu.ppfeaturemask=0xffffffff</span></code></p></li>
+<li><p>In all AMD Linux drivers there is a bug with returning the fan control back to automatic. As a workaround
+we added the parameter <code class="docutils literal notranslate"><span class="pre">-fanidle</span></code> which allows you to specify the default fan speed after PhoenixMiner is
+closed. The default value is 20%</p></li>
+<li><p>In AMD Linux drivers the fan PWM curves are very strange and while we have tested on dozens of cards, and
+PhoenixMiner should be able to detect the PWM type automatically, you can use the <code class="docutils literal notranslate"><span class="pre">-fpwm</span></code> parameter to force
+different kinds of fan PWM mappings (not recommended unless you really know what you are doing).</p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="remote.html" class="btn btn-neutral float-left" title="Remote monitoring and management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Phoenix
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

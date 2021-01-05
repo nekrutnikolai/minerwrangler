@@ -4,30 +4,52 @@
 
 # Ubuntu server 20.04 lts
 
+#define colors for colored text
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
+# check with user that the gpus are correctly installed and are the right ones
+
+vendor=$(lshw -class display | grep 'vendor' | uniq)
+product=$(lshw -class display | grep 'product')
+
+clear
+
+if [[ $vendor =~ "NVIDIA" ]]; then
+        echo "${green}NVIDIA detected${reset}"
+else
+        echo "${red}No NVIDIA gpu's detected${reset}"
+fi
+
+echo "$product"
+
+read -n 1 -r -s -p $'Press any key to continue...\n'
+
 # update and upgrade packages to the latest version
-sudo apt update && sudo apt upgrade -y
+apt update && apt upgrade -y
 
 # install all the necessary libraries
-sudo apt install git unzip build-essential cmake libuv1-dev libssl-dev libhwloc-dev screen xserver-xorg p7zip xorg-dev libgtk-3-dev xdm -y
+apt install git unzip build-essential cmake libuv1-dev libssl-dev libhwloc-dev screen xserver-xorg p7zip xorg-dev libgtk-3-dev xdm -y
 
 # allow ssh through firewall, and enable firewall
-sudo ufw allow ssh
+ufw allow ssh
 
-sudo ufw enable -y
+ufw enable -y
 
 # reinstall nvidia drivers if it is not a fresh install
-sudo apt purge nvidia-*
+apt purge nvidia-*
 
-sudo apt autoremove
+apt autoremove
 
-sudo add-apt-repository ppa:graphics-drivers/ppa -y
+add-apt-repository ppa:graphics-drivers/ppa -y
 
-sudo apt upgrade
+apt upgrade
 
-sudo apt install nvidia-driver-440 -y
+apt install nvidia-driver-440 -y
 
 # install CUDA for mining
-sudo apt install nvidia-cuda-toolkit -y
+apt install nvidia-cuda-toolkit -y
 
 # configure NVIDIA drivers so that they can work headlessly
 echo 'export PATH=/bin:/usr/bin:/sbin' >> /etc/X11/xdm/Xsetup
@@ -42,9 +64,9 @@ echo ‘xset s off’ >> /etc/X11/xdm/Xsetup
 
 echo ‘xhost +’ >> /etc/X11/xdm/Xsetup
 
-sudo nvidia-xconfig -a --allow-empty-initial-configuration --cool-bits=28 --use-display-device="DFP-0" --connected-monitor="DFP-0" --custom-edid="DFP-0:/etc/X11/dfp-edid.bin"
+nvidia-xconfig -a --allow-empty-initial-configuration --cool-bits=28 --use-display-device="DFP-0" --connected-monitor="DFP-0" --custom-edid="DFP-0:/etc/X11/dfp-edid.bin"
 
-sudo sed -i '/Driver/a Option "Interactive" "False"' /etc/X11/xorg.conf
+sed -i '/Driver/a Option "Interactive" "False"' /etc/X11/xorg.conf
 
 # install NBMiner for dat RVN!
 
@@ -84,4 +106,4 @@ cmake ..
 make -j$(nproc)
 
 # reboot system to get ready to mine
-sudo reboot
+reboot

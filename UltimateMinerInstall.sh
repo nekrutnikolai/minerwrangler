@@ -4,9 +4,8 @@
 
 # Ubuntu server 20.04 lts
 
-sudo apt update
-
-sudo apt upgrade -y
+# update and upgrade packages to the latest version
+sudo apt update && sudo apt upgrade -y
 
 # install all the necessary libraries
 sudo apt install git unzip build-essential cmake libuv1-dev libssl-dev libhwloc-dev screen xserver-xorg p7zip xorg-dev libgtk-3-dev xdm -y
@@ -16,12 +15,12 @@ sudo ufw allow ssh
 
 sudo ufw enable -y
 
-# reinstall nvidia drivers
+# reinstall nvidia drivers if it is not a fresh install
 sudo apt purge nvidia-*
 
 sudo apt autoremove
 
-sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo add-apt-repository ppa:graphics-drivers/ppa -y
 
 sudo apt upgrade
 
@@ -68,10 +67,12 @@ mv PhoenixMiner_5.3b_Linux PhoenixMiner
 
 rm PhoenixMiner_5.3b_Linux.tar.gz
 
-#install etherenlargement pill
+#install etherenlargement pill and rename it to ETHPill
 wget https://github.com/Virosa/ETHlargementPill/raw/master/OhGodAnETHlargementPill-r2
 
 chmod +x OhGodAnETHlargementPill-r2
+
+rm OhGodAnETHlargementPill-r2 ETHPill
 
 # install of that xmrig shiete
 git clone https://github.com/xmrig/xmrig.git

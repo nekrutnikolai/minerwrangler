@@ -47,7 +47,7 @@ nvidia_install() {
   # install CUDA for mining
   apt install nvidia-cuda-toolkit -y
 
-  # configure NVIDIA drivers so that they can work headlessly
+  # configure NVIDIA drivers so that they can work headlessly, basically trick the gpu into thinking there's a display
   echo 'export PATH=/bin:/usr/bin:/sbin' >> /etc/X11/xdm/Xsetup
   echo ‘export HOME=/root’ >> /etc/X11/xdm/Xsetup
   echo ‘export DISPLAY=:0’ >> /etc/X11/xdm/Xsetup

@@ -4,9 +4,8 @@
 
 # Ubuntu server 20.04 lts
 
-#define the installation variable, and set it to zero
-
-var=0
+#define the installation variable, and set it to one
+var=1
 
 #define colors for colored text
 red=`tput setaf 1`
@@ -21,10 +20,11 @@ confirm_install() {
     case $REPLY in
       [yY])
         echo
-        ((var+=1))
+        ((var*=2))
         return 0 ;;
       [nN])
         echo
+        ((var-=1))
         return 1 ;;
       *)
         echo " ${red}invalid input${reset}"
@@ -71,20 +71,6 @@ phoenixminer_install() {
   rm PhoenixMiner_5.3b_Linux.tar.gz
 }
 
-# NBMiner installation for dat RVN!
-nbminer_install() {
-  # download it
-  wget https://github.com/NebuTech/NBMiner/releases/download/v33.4/NBMiner_33.4_Linux.tgz
-
-  # extract it
-  tar xvzf NBMiner_33.4_Linux.tgz
-
-  # rename to NBMiner
-  mv NBMiner_Linux NBMiner
-
-  rm NBMiner_33.4_Linux.tgz
-}
-
 # ETHlargementPill installation for GTX 1080, 1080TI and Titan XP
 pill_install() {
   wget https://github.com/Virosa/ETHlargementPill/raw/master/OhGodAnETHlargementPill-r2
@@ -116,10 +102,9 @@ clear
 
 if [[$vendor =~ "NVIDIA"]]; then
   echo "${green}NVIDIA GPUs detected${reset}"
-  # set some kind of variable, dependent on NVIDIA shiete
 
 elif [[$vendor =~ "AMD"]]; then
-  echo "${red}AMD detected but not yet supported :(${reset}"
+  echo "${red}AMD detected but not yet supported${reset}"
 
 else
   echo "${red}No GPUs detected${reset}"
@@ -134,9 +119,10 @@ confirm_install "Does this look good?" || exit 0
 
 confirm_install "CPU Mining?"
 
-confirm_install "NVIDIA Mining?"
+if [[$vendor =~ "NVIDIA"]]; then
+  printf "\U1F48A" && confirm_install "The pill? (for GTX 1080, 1080TI & Titan XP)"
 
-printf '\U1F48A' && confirm_install "The pill? (for GTX 1080, 1080TI & Titan XP)"
+fi
 
 # update and upgrade packages to the latest version
 apt update && apt upgrade -y
@@ -146,9 +132,38 @@ ufw allow ssh
 
 ufw enable -y
 
-# Install the Nvidia Shiete
-if [[$var >= 1]]; then
+# installation
+if [[$vendor =~ "NVIDIA"]]; then
   nvidia_install
+  phoenixminer_install
+
+elif [[$var = 3]]; then
+  xmrig_install
+
+elif [[$var = 2]]; then
+  pill_install
+
+elif [[$var = 8]]; then
+  xmrig_install
+  pill_install
+
+else
+  exit 0
+
+fi
 
 # reboot system to get ready to mine
+
+clear
+
+echo "if you want to make this script even better, check out my github (NikolaiTeslovich)"
+
+echo "rebooting shortly"
+
+sleep 5
+
+echo -e "\U26CF" "${green} Happy Mining ${reset}" "\U26CF"
+
+sleep 1
+
 reboot

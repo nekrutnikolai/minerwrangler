@@ -7,5 +7,5 @@ Use these scripts are your own risk. I am not responsible for any damage that ma
 ## To Do
 
 * Add AMD version
-* Make it conditional based on what gpus and software the user would like
+* Make it conditional based on what GPUs and software the user would like
 * Write a usage guide

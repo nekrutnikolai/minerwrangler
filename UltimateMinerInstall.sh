@@ -13,24 +13,6 @@ red=`tput setaf 1`
 green=`tput setaf 2`
 reset=`tput sgr0`
 
-#define the confirm function
-confirm() {
-  local REPLY
-  while true; do
-    read -r -n 1 -p "${1:-Continue?} [y/n]: " REPLY
-    case $REPLY in
-      [yY])
-        echo
-        return 0 ;;
-      [nN])
-        echo
-        return 1 ;;
-      *)
-        echo " ${red}invalid input${reset}"
-    esac
-  done
-}
-
 #define the confirm install function
 confirm_install() {
   local REPLY
@@ -167,8 +149,6 @@ ufw enable -y
 # Install the Nvidia Shiete
 if [[ $var >= 1]]; then
   nvidia_install
-
-
 
 # reboot system to get ready to mine
 reboot

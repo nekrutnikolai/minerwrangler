@@ -114,11 +114,11 @@ model=$(lshw -class display | grep 'product')
 
 clear
 
-if [[ $vendor =~ "NVIDIA" ]]; then
+if [[$vendor =~ "NVIDIA"]]; then
   echo "${green}NVIDIA GPUs detected${reset}"
   # set some kind of variable, dependent on NVIDIA shiete
 
-elif [[ $vendor =~ "AMD" ]]; then
+elif [[$vendor =~ "AMD"]]; then
   echo "${red}AMD detected but not yet supported :(${reset}"
 
 else
@@ -147,7 +147,7 @@ ufw allow ssh
 ufw enable -y
 
 # Install the Nvidia Shiete
-if [[ $var >= 1]]; then
+if [[$var >= 1]]; then
   nvidia_install
 
 # reboot system to get ready to mine

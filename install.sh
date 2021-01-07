@@ -101,10 +101,10 @@ model=$(lshw -class display | grep 'product')
 clear
 
 if [[$vendor =~ "NVIDIA"]]; then
-  echo "${green}NVIDIA GPUs detected${reset}"
+  echo -e "${green}NVIDIA GPUs detected${reset}" "\U2714"
 
 elif [[$vendor =~ "AMD"]]; then
-  echo "${red}AMD detected but not yet supported${reset}"
+  echo "${red}AMD GPUs are not yet supported${reset}"
 
 else
   echo "${red}No GPUs detected${reset}"
@@ -162,7 +162,7 @@ echo "rebooting shortly"
 
 sleep 5
 
-echo -e "\U26CF" "${green} Happy Mining ${reset}" "\U26CF"
+echo -e "\U26CF" "${green} Happy Mining${reset}" "\U26CF"
 
 sleep 1
 

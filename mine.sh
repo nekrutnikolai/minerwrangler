@@ -2,10 +2,14 @@
 
 # created by Nikolai Nekrutenko
 
-screen -S xmr -d -m ./xmr.sh
+# check if the xmrig directory exists, then start mining
+test -d xmrig && screen -S xmr -d -m ./xmr.sh || echo "no XMRig found"
 
-screen -S eth -d -m ./eth.sh
+# check if the eth script exists, then start mining
+test -f eth.sh && screen -S eth -d -m ./eth.sh || echo "no ETH found"
 
-test -f ETHPill && screen -S pill -d -m sudo ./ETHPill || echo "no ETHPill found"
+# check if the pill exists, then start mining
+test -f ETHPill && screen -S pill -d -m sudo ./ETHPill || echo -e "no" "\U1F48A" "found"
 
+# list all the screens
 screen -list

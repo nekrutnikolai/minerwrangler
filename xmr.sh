@@ -2,9 +2,10 @@
 
 # created by Nikolai Nekrutenko
 
+# get into the directory
 cd xmrig/build
 
-# update the miner automatically
+# update the mine
 git pull
 
-./xmrig --donate-level 1 -o pool.supportxmr.com:443 -u XMRwalletadress -k --tls -p workername
+./xmrig --donate-level 1 -o pool.supportxmr.com:443 -u XMRwalletaddress -k --tls -p workername

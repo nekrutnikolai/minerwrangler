@@ -71,10 +71,9 @@ nvidia_install() {
 # Phoenix Miner installation
 phoenixminer_install() {
   # Download
-  wget https://github.com/NikolaiTeslovich/UltimateMinerInstall/raw/main/PhoenixMiner_5.3b_Linux.tar.gz
-
+  wget https://github.com/NikolaiTeslovich/MinerSoftware/raw/main/PhoenixMiner_5.3b_Linux.tar.gz
   # Extract the file, rename it, and delete the installer
-  tar -xvf PhoenixMiner_5.3b_Linux.tar.gz
+  tar -xvf -name *.tar.gz
   mv PhoenixMiner_5.3b_Linux PhoenixMiner
   rm PhoenixMiner_5.3b_Linux.tar.gz
 }
@@ -82,7 +81,7 @@ phoenixminer_install() {
 # ETHlargementPill installation for GTX 1080, 1080TI and Titan XP
 pill_install() {
   # Download
-  wget https://github.com/Virosa/ETHlargementPill/raw/master/OhGodAnETHlargementPill-r2
+  wget https://github.com/NikolaiTeslovich/MinerSoftware/raw/main/OhGodAnETHlargementPill-r2
 
   # Make the file executable, and rename it
   chmod +x OhGodAnETHlargementPill-r2
@@ -93,10 +92,10 @@ pill_install() {
 
 clear
 
-if [[$vendor =~ "NVIDIA"]]; then
+if [[ $vendor =~ "NVIDIA" ]]; then
   echo -e "${green}NVIDIA GPUs detected${reset}" "\U2714"
 
-elif [[$vendor =~ "AMD"]]; then
+elif [[ $vendor =~ "AMD" ]]; then
   echo "${red}AMD GPUs are not yet supported${reset}"
   echo "exiting in 5 seconds"
   sleep 5

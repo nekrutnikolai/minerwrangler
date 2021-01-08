@@ -132,15 +132,20 @@ if [[$vendor =~ "NVIDIA"]]; then
   nvidia_install
   phoenixminer_install
 
-elif [[$var = 4]]; then
-  pill_install
+  if [[$var = 4]]; then
+    pill_install
+
+  fi
 
 else
   exit 0
 
 fi
 
-# reboot system to get ready to mine
+# REBOOT SYSTEM AND GET READY TO MINE
+
+# make all the scripts executable
+chmod +x mine.sh eth.sh clockfan.sh
 
 clear
 
@@ -150,7 +155,7 @@ echo "rebooting shortly"
 
 sleep 5
 
-echo -e "\U26CF" "${green} Happy Mining${reset}" "\U26CF"
+echo -e "\U26CF" "${green}Happy Mining${reset}" "\U26CF"
 
 sleep 1
 

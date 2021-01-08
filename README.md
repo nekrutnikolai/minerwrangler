@@ -1,7 +1,7 @@
 # MinerInstall
 The ultimate shell script to ease your way into mining on Linux
 
-# One-liner installation
+# The ultimate one-liner
 ```
 sudo apt install git && git clone https://github.com/NikolaiTeslovich/MinerInstall.git && cd MinerInstall && chmod +x install.sh && sudo ./install.sh
 ```

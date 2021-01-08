@@ -2,9 +2,6 @@
 
 # created by Nikolai Nekrutenko
 
-# check if the xmrig directory exists, then start mining
-test -d xmrig && screen -S xmr -d -m ./xmr.sh || echo "no XMRig found"
-
 # check if the eth script exists, then start mining
 test -f eth.sh && screen -S eth -d -m ./eth.sh || echo "no ETH found"
 

@@ -4,13 +4,24 @@
 
 # Ubuntu server 20.04 lts
 
-#define the installation variable, and set it to one
-var=1
+# DEFINING ALL THE VARIABLES
 
 #define colors for colored text
 red=`tput setaf 1`
 green=`tput setaf 2`
 reset=`tput sgr0`
+
+#define the installation variable, and set it to one
+var=1
+
+# define variables for the manufacturer and model of the GPU(s), and hide the commandline output
+
+{
+  vendor=$(lshw -class display | grep 'vendor' | uniq)
+  model=$(lshw -class display | grep 'product')
+} &> /dev/null
+
+# DEFINING THE INSTALLATION FUNCTIONS
 
 #define the confirm install function
 confirm_install() {
@@ -62,67 +73,51 @@ nvidia_install() {
 
 # Phoenix Miner installation
 phoenixminer_install() {
-  wget https://github.com/NikolaiTeslovich/UltimateMinerInstall/raw/main/PhoenixMiner_5.3b_Linux.tar.gz
-
-  tar -xvf PhoenixMiner_5.3b_Linux.tar.gz
-
+  # Download
+  wget https://github.com/NikolaiTeslovich/MinerSoftware/raw/main/PhoenixMiner_5.3b_Linux.tar.gz
+  # Extract the file, rename it, and delete the installer
+  tar -xvf -name *.tar.gz
   mv PhoenixMiner_5.3b_Linux PhoenixMiner
-
   rm PhoenixMiner_5.3b_Linux.tar.gz
 }
 
 # ETHlargementPill installation for GTX 1080, 1080TI and Titan XP
 pill_install() {
-  wget https://github.com/Virosa/ETHlargementPill/raw/master/OhGodAnETHlargementPill-r2
+  # Download
+  wget https://github.com/NikolaiTeslovich/MinerSoftware/raw/main/OhGodAnETHlargementPill-r2
 
+  # Make the file executable, and rename it
   chmod +x OhGodAnETHlargementPill-r2
-
   mv OhGodAnETHlargementPill-r2 ETHPill
 }
 
-# XMRig installation
-xmrig_install() {
-  apt install build-essential cmake libuv1-dev libssl-dev libhwloc-dev -y
-
-  git clone https://github.com/xmrig/xmrig.git
-
-  mkdir xmrig/build && cd xmrig/build
-
-  cmake ..
-
-  make -j$(nproc)
-}
-
-# check with user that the gpus are correctly installed and are the right ones
-vendor=$(lshw -class display | grep 'vendor' | uniq)
-
-model=$(lshw -class display | grep 'product')
+# THE CONDITIONAL INSTALLATON CODE
 
 clear
 
-if [[$vendor =~ "NVIDIA"]]; then
+if [[ $vendor =~ "NVIDIA" ]]; then
   echo -e "${green}NVIDIA GPUs detected${reset}" "\U2714"
 
-elif [[$vendor =~ "AMD"]]; then
+elif [[ $vendor =~ "AMD" ]]; then
   echo "${red}AMD GPUs are not yet supported${reset}"
+  echo "exiting in 5 seconds"
+  sleep 5
+  exit 0
 
 else
   echo "${red}No GPUs detected${reset}"
+  echo "exiting in 5 seconds"
+  sleep 5
+  exit 0
 
 fi
 
 echo "$model"
 
 # setup questions
+confirm_install "Is this the correct hardware?" || exit 0
 
-confirm_install "Does this look good?" || exit 0
-
-confirm_install "CPU Mining?"
-
-if [[$vendor =~ "NVIDIA"]]; then
-  printf "\U1F48A" && confirm_install "The pill? (for GTX 1080, 1080TI & Titan XP)"
-
-fi
+printf "\U1F48A" && confirm_install "The pill? (for GTX 1080, 1080TI & Titan XP)"
 
 # update and upgrade packages to the latest version
 apt update && apt upgrade -y
@@ -137,22 +132,20 @@ if [[$vendor =~ "NVIDIA"]]; then
   nvidia_install
   phoenixminer_install
 
-elif [[$var = 3]]; then
-  xmrig_install
+  if [[$var = 4]]; then
+    pill_install
 
-elif [[$var = 2]]; then
-  pill_install
-
-elif [[$var = 8]]; then
-  xmrig_install
-  pill_install
+  fi
 
 else
   exit 0
 
 fi
 
-# reboot system to get ready to mine
+# REBOOT SYSTEM AND GET READY TO MINE
+
+# make all the scripts executable
+chmod +x mine.sh eth.sh clockfan.sh
 
 clear
 
@@ -162,7 +155,7 @@ echo "rebooting shortly"
 
 sleep 5
 
-echo -e "\U26CF" "${green} Happy Mining${reset}" "\U26CF"
+echo -e "\U26CF" "${green}Happy Mining${reset}" "\U26CF"
 
 sleep 1
 

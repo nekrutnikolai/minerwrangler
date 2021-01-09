@@ -73,18 +73,18 @@ nvidia_install() {
 
 # Phoenix Miner installation
 phoenixminer_install() {
-  # Download
-  wget https://github.com/NikolaiTeslovich/MinerSoftware/raw/main/PhoenixMiner_5.3b_Linux.tar.gz
+  # Download Phoenix Miner 5.4c - https://phoenixminer.org/download/5.4c/
+  wget https://bit.ly/2WrzCmj
   # Extract the file, rename it, and delete the installer
-  tar -xvf -name *.tar.gz
-  mv PhoenixMiner_5.3b_Linux PhoenixMiner
-  rm PhoenixMiner_5.3b_Linux.tar.gz
+  unzip 2WrzCmj
+  mv PhoenixMiner_* PhoenixMinerTest
+  rm 2WrzCmj
 }
 
 # ETHlargementPill installation for GTX 1080, 1080TI and Titan XP
 pill_install() {
   # Download
-  wget https://github.com/NikolaiTeslovich/MinerSoftware/raw/main/OhGodAnETHlargementPill-r2
+  wget https://github.com/admin-ipfs/OhGodAnETHlargementPill/raw/master/OhGodAnETHlargementPill-r2
 
   # Make the file executable, and rename it
   chmod +x OhGodAnETHlargementPill-r2

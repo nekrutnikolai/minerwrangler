@@ -1,4 +1,4 @@
-# MinerInstall
+# minerwrangler
 The ultimate shell script to ease your way into ETH mining on Linux
 
 # The ultimate one-liner

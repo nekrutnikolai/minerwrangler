@@ -129,7 +129,7 @@ apt update && apt upgrade -y
 # allow ssh through firewall, and enable firewall for security purposes
 ufw allow ssh
 
-ufw enable -y
+yes | ufw enable
 
 # installation
 if [[$vendor =~ "NVIDIA"]]; then

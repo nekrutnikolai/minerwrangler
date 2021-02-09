@@ -31,7 +31,7 @@ Use these scripts are your own risk. I am not responsible for any damage that ma
 
 ## To do
 * Write a usage guide
-* Figure out which NVIDIA driver version works
+* Figure out which latest NVIDIA driver should work
 * AMD version
 * Make it conditional based on what GPUs and software the user would like
 * Support other miners and algorithms

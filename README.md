@@ -22,11 +22,16 @@
 sudo apt install git && git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrangler && chmod +x install.sh && sudo ./install.sh
 ```
 
+## Tested hardware
+* GTX 1080
+* RTX 2080
+
 ## Disclaimer
 Use these scripts are your own risk. I am not responsible for any damage that may occur.
 
 ## To do
 * Write a usage guide
+* Figure out which NVIDIA driver version works
 * AMD version
 * Make it conditional based on what GPUs and software the user would like
 * Support other miners and algorithms

@@ -14,8 +14,8 @@
   <a href="https://github.com/NikolaiTeslovich/minerwrangler/blob/main/LICENSE">
     <img alt="MIT license" src="https://img.shields.io/github/license/NikolaiTeslovich/minerwrangler">
   </a>
-
   <img alt="last commit" src=https://img.shields.io/github/last-commit/NikolaiTeslovich/minerwrangler>
+  <img alt="commit frequency" scr=https://img.shields.io/github/commit-activity/m/NikolaiTeslovich/minerwrangler>
 </p>
 
 ## The ultimate one-liner

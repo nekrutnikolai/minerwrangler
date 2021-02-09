@@ -14,7 +14,7 @@
   <a href="https://github.com/NikolaiTeslovich/minerwrangler/blob/main/LICENSE">
     <img alt="MIT license" src="https://img.shields.io/github/license/NikolaiTeslovich/minerwrangler">
   </a>
-  <img alt="GPU Support" scr=https://img.shields.io/badge/GPU%20support-NVIDIA-green>
+  <img alt="GPU Support" scr="https://img.shields.io/badge/GPU%20support-NVIDIA-green">
 </p>
 
 ## The ultimate one-liner

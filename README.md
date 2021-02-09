@@ -3,11 +3,11 @@
 </h1>
 
 <h3 align="center">
-  Cryptocurrency miner installer and manager
+  A headless cryptocurrency miner installer and manager
 </h3>
 
 <p align="center">
-  MinerWrangler is the ultimate bundle of shell scripts to ease your way into cryptocurrency mining that is open-source and gives you full control over your rigs—by default.
+  MinerWrangler is the ultimate bundle of shell scripts to ease your way into cryptocurrency mining that is open-source and gives you full control over your rigs—by default. No monitor, keyboard, or mouse required.
 </p>
 
 <p align="center">

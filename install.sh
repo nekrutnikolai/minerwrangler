@@ -117,7 +117,11 @@ echo "$model"
 # setup questions
 confirm_install "Is this the correct hardware?" || exit 0
 
+clear
+
 printf "\U1F48A" && confirm_install "The pill? (GTX 1080, 1080TI & Titan XP)"
+
+clear
 
 # update and upgrade packages to the latest version
 apt update && apt upgrade -y

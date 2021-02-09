@@ -22,9 +22,12 @@
 git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrangler && chmod +x install.sh && sudo ./install.sh
 ```
 
-## Tested hardware
-* GTX 1080
-* RTX 2080
+## Tested on
+* **GPUs**
+  * GTX 1080
+  * RTX 2080
+* **Driver version**
+  * nvidia-driver-440
 
 ## To do
 * Write a usage guide

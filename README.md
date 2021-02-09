@@ -18,15 +18,15 @@
   <img alt="last commit" src=https://img.shields.io/github/last-commit/NikolaiTeslovich/minerwrangler>
 </p>
 
-### The ultimate one-liner
+## The ultimate one-liner
 ```
 sudo apt install git && git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrangler && chmod +x install.sh && sudo ./install.sh
 ```
 
-### Disclaimer
+## Disclaimer
 Use these scripts are your own risk. I am not responsible for any damage that may occur.
 
-### To do
+## To do
 * Write a usage guide
 * AMD version
 * Make it conditional based on what GPUs and software the user would like

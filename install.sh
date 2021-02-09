@@ -149,8 +149,6 @@ chmod +x mine.sh eth.sh clockfan.sh
 
 clear
 
-echo "if you want to make this script even better, check out my github (NikolaiTeslovich)"
-
 echo "rebooting shortly"
 
 sleep 5

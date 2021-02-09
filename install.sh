@@ -132,11 +132,11 @@ ufw allow ssh
 yes | ufw enable
 
 # installation
-if [[$vendor =~ "NVIDIA"]]; then
+if [[ $vendor =~ "NVIDIA" ]]; then
   nvidia_install
   phoenixminer_install
 
-  if [[$var = 4]]; then
+  if [[ $var = 4 ]]; then
     pill_install
 
   fi

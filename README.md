@@ -29,8 +29,6 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 * **Driver version**
   * nvidia-driver-440
 
-- [ ] just a test lol
-
 ## To do
 * Write a usage guide
 * Figure out which latest NVIDIA driver should work

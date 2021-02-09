@@ -1,9 +1,7 @@
 # minerwrangler
 The ultimate shell script to ease your way into ETH mining on Linux
 
-<!--![GitHub last commit](https://img.shields.io/github/last-commit/NikolaiTeslovich/minerwrangler)-->
-
-![GitHub last commit](https://img.shields.io/github/last-commit/NikolaiTeslovich/minerwrangler?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/NikolaiTeslovich/minerwrangler)
 
 # The ultimate one-liner
 ```

@@ -3,7 +3,7 @@ The ultimate shell script to ease your way into ETH mining on Linux
 
 # The ultimate one-liner
 ```
-sudo apt install git && git clone https://github.com/NikolaiTeslovich/MinerInstall.git && cd MinerInstall && chmod +x install.sh && sudo ./install.sh
+sudo apt install git && git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrangler && chmod +x install.sh && sudo ./install.sh
 ```
 
 # Disclaimer

@@ -15,7 +15,7 @@
     <img alt="MIT license" src="https://img.shields.io/github/license/NikolaiTeslovich/minerwrangler">
   </a>
   <img alt="last commit" src=https://img.shields.io/github/last-commit/NikolaiTeslovich/minerwrangler>
-  <img alt="commit frequency" scr=https://img.shields.io/github/commit-activity/m/NikolaiTeslovich/minerwrangler>
+  <img alt="commit frequency" scr=https://img.shields.io/github/commit-activity/w/NikolaiTeslovich/minerwrangler>
 </p>
 
 ## The ultimate one-liner

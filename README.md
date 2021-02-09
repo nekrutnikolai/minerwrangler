@@ -31,4 +31,4 @@ Use these scripts are your own risk. I am not responsible for any damage that ma
 * AMD version
 * Make it conditional based on what GPUs and software the user would like
 * Support other miners and algorithms
-* Automatically start mining after power outage
+* Automatically start mining after a power outage

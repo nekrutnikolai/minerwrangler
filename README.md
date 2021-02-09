@@ -1,5 +1,14 @@
-# minerwrangler
-The ultimate shell script to ease your way into ETH mining on Linux
+<h1 align="center">
+  MinerWrangler
+</h1>
+
+<h3 align="center">
+  Cryptocurrency miner installer and manager
+</h3>
+
+<p align="center">
+  MinerWrangler is the ultimate bundle of shell scripts to ease your way into cryptocurrency mining that is open-source and gives you full control over your rigs—by default.
+</p>
 
 <p align="center">
   <a href="https://github.com/NikolaiTeslovich/minerwrangler/blob/main/LICENSE">
@@ -15,7 +24,7 @@ sudo apt install git && git clone https://github.com/NikolaiTeslovich/minerwrang
 ```
 
 # Disclaimer
-Use these scripts are your own risk. I am not responsible for any damage that may occur
+Use these scripts are your own risk. I am not responsible for any damage that may occur.
 
 # To do
 * Write a usage guide

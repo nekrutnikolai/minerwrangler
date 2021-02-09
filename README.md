@@ -1,9 +1,13 @@
 # minerwrangler
 The ultimate shell script to ease your way into ETH mining on Linux
 
-![GitHub last commit](https://img.shields.io/github/last-commit/NikolaiTeslovich/minerwrangler)
+<p align="center">
+  <a href="https://github.com/NikolaiTeslovich/minerwrangler/blob/main/LICENSE">
+    <img alt="MIT license" src="https://img.shields.io/github/license/NikolaiTeslovich/minerwrangler">
+  </a>
 
-![GitHub](https://img.shields.io/github/license/NikolaiTeslovich/minerwrangler)
+  <img alt="last commit" src=https://img.shields.io/github/last-commit/NikolaiTeslovich/minerwrangler>
+</p>
 
 # The ultimate one-liner
 ```

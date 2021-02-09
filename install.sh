@@ -77,7 +77,7 @@ phoenixminer_install() {
   wget https://bit.ly/2WrzCmj
   # Extract the file, rename it, and delete the installer
   unzip 2WrzCmj
-  mv PhoenixMiner_* PhoenixMinerTest
+  mv PhoenixMiner_* PhoenixMiner
   rm 2WrzCmj
 }
 
@@ -153,12 +153,8 @@ chmod +x mine.sh eth.sh clockfan.sh
 
 clear
 
-echo "rebooting shortly"
-
-sleep 5
-
 echo -e "\U26CF" "${green}Happy Mining${reset}" "\U26CF"
 
-sleep 1
+sleep 5
 
 reboot

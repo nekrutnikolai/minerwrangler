@@ -79,6 +79,8 @@ phoenixminer_install() {
   unzip 2WrzCmj
   mv PhoenixMiner_* PhoenixMiner
   rm 2WrzCmj
+  # Make Phoenix Miner itself executable
+  cd PhoenixMiner && chmod +x PhoenixMiner && cd ..
 }
 
 # ETHlargementPill installation for GTX 1080, 1080TI and Titan XP

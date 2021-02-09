@@ -1,6 +1,8 @@
 # minerwrangler
 The ultimate shell script to ease your way into ETH mining on Linux
 
+![GitHub last commit](https://img.shields.io/github/last-commit/NikolaiTeslovich/minerwrangler)
+
 # The ultimate one-liner
 ```
 sudo apt install git && git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrangler && chmod +x install.sh && sudo ./install.sh

@@ -26,9 +26,6 @@ sudo apt install git && git clone https://github.com/NikolaiTeslovich/minerwrang
 * GTX 1080
 * RTX 2080
 
-## Disclaimer
-Use these scripts are your own risk. I am not responsible for any damage that may occur.
-
 ## To do
 * Write a usage guide
 * Figure out which latest NVIDIA driver should work

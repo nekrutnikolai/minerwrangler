@@ -18,10 +18,10 @@ DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 sudo nvidia-settings \
 
 # configure gpu mem speeds
 DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 sudo nvidia-settings \
--a '[gpu:0]/GPUMemoryTransferRateOffset[2]=2000' -a '[gpu:0]/GPUMemoryTransferRateOffset[3]=2000' -a '[gpu:0]/GPUMemoryTransferRateOffset[4]=2000'
+-a '[gpu:0]/GPUMemoryTransferRateOffset[2]=1900' -a '[gpu:0]/GPUMemoryTransferRateOffset[3]=1900' -a '[gpu:0]/GPUMemoryTransferRateOffset[4]=1900'
 
 DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 sudo nvidia-settings \
--a '[gpu:1]/GPUMemoryTransferRateOffset[2]=1400' -a '[gpu:1]/GPUMemoryTransferRateOffset[3]=1400' -a '[gpu:1]/GPUMemoryTransferRateOffset[4]=1400'
+-a '[gpu:1]/GPUMemoryTransferRateOffset[2]=1300' -a '[gpu:1]/GPUMemoryTransferRateOffset[3]=1300' -a '[gpu:1]/GPUMemoryTransferRateOffset[4]=1300'
 
 # configure gpu clock speeds
 DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 sudo nvidia-settings \

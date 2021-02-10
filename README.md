@@ -7,7 +7,7 @@
 </h3>
 
 <p align="center">
-  MinerWrangler is the ultimate bundle of shell scripts to ease your way into cryptocurrency mining that is open-source and gives you full control over your rigs—by default. No monitor, keyboard, or mouse required.
+  MinerWrangler is the ultimate bundle of bash scripts to ease your way into cryptocurrency mining that is open-source and gives you full control over your rigs—by default. No monitor, keyboard, or mouse required.
 </p>
 
 <p align="center">
@@ -22,6 +22,13 @@
 git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrangler && chmod +x install.sh && sudo ./install.sh
 ```
 
+## Features
+* Simple and intuitive to use
+* Support for the latest & greatest version of Ubuntu Server LTS
+* Firewall is enabled by default
+* Full control over your rig(s)
+* Minimal fees (only from mining software)
+
 ## Tested on
 * **GPUs**
   * GTX 1080
@@ -31,8 +38,7 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 
 ## To do
 * Write a usage guide
-* Figure out which latest NVIDIA driver should work
+* Test latest NVIDIA drivers should work
+* Add option to automatically mine on boot
 * AMD version
-* Make it conditional based on what GPUs and software the user would like
 * Support other miners and algorithms
-* Automatically start mining after a power outage

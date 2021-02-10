@@ -3,11 +3,11 @@
 # created by Nikolai Nekrutenko
 
 # enable persistence mode
-sudo nvidia-smi -pm ENABLED
+nvidia-smi -pm ENABLED
 
 # set power limit to 75 watts
-sudo nvidia-smi -i 0 -pl 175
-sudo nvidia-smi -i 1 -pl 145
+nvidia-smi -i 0 -pl 175
+nvidia-smi -i 1 -pl 145
 
 # configure gpu fan speed
 DISPLAY=:0 XAUTHORITY=/var/run/lightdm/root/:0 sudo nvidia-settings -a [gpu:0]/GPUFanControlState=1

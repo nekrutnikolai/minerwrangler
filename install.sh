@@ -45,30 +45,19 @@ confirm_install() {
 
 # define Nvidia installation
 nvidia_install() {
-  # install all the necessary libraries
-  apt install unzip screen xserver-xorg-core xorg-dev libgtk-3-dev -y # xdm lightdm not sure if I need them, asks config during install
+  # install all the necessary libraries, will ask config during install
+  apt install unzip screen xorg lightdm -y
 
-  # reinstall nvidia drivers if it is not a fresh install
+  # reinstall nvidia drivers and CUDA if it is not a fresh install
   apt purge nvidia-*
   apt autoremove
   add-apt-repository ppa:graphics-drivers/ppa -y
   apt upgrade
-  apt install nvidia-driver-440 -y
+  apt install nvidia-driver-440 nvidia-cuda-toolkit -y
 
-  # install CUDA for mining
-  apt install nvidia-cuda-toolkit -y
+  # nvidia-xconfig -a --allow-empty-initial-configuration --cool-bits=28 --use-display-device="DFP-0" --connected-monitor="DFP-0" --custom-edid="DFP-0:/etc/X11/dfp-edid.bin"
 
-  # configure NVIDIA drivers so that they can work headlessly, basically trick the gpu into thinking there's a display
-  echo 'export PATH=/bin:/usr/bin:/sbin' >> /etc/X11/xdm/Xsetup
-  echo ‘export HOME=/root’ >> /etc/X11/xdm/Xsetup
-  echo ‘export DISPLAY=:0’ >> /etc/X11/xdm/Xsetup
-  echo ‘xset -dpms’ >> /etc/X11/xdm/Xsetup
-  echo ‘xset s off’ >> /etc/X11/xdm/Xsetup
-  echo ‘xhost +’ >> /etc/X11/xdm/Xsetup
-
-  nvidia-xconfig -a --allow-empty-initial-configuration --cool-bits=28 --use-display-device="DFP-0" --connected-monitor="DFP-0" --custom-edid="DFP-0:/etc/X11/dfp-edid.bin"
-
-  sed -i '/Driver/a Option "Interactive" "False"' /etc/X11/xorg.conf
+  nvidia-xconfig --enable-all-gpus --cool-bits=28 --allow-empty-initial-configuration
 }
 
 # Phoenix Miner installation
@@ -149,6 +138,8 @@ else
 fi
 
 # REBOOT SYSTEM AND GET READY TO MINE
+
+update-grub
 
 # make all the scripts executable
 chmod +x mine.sh eth.sh clockfan.sh

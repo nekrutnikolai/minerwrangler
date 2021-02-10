@@ -45,7 +45,7 @@ confirm_install() {
 nvidia_install() {
   # reinstall nvidia drivers and CUDA if it is not a fresh install
   apt purge nvidia-*
-  apt autoremove
+  apt autoremove -y
   add-apt-repository ppa:graphics-drivers/ppa -y
   apt upgrade
   # install all the necessary libraries, will ask config during install
@@ -57,7 +57,7 @@ nvidia_install() {
 # Phoenix Miner installation
 phoenixminer_install() {
   # install unzip
-  apt install unzip
+  apt install unzip -y
   # Download latest Phoenix Miner (5.5c at the time of editing this) - https://phoenixminer.org/download/latest/
   wget https://bit.ly/3pf1gzU
   # Extract the file, rename it, and delete the installer

@@ -27,7 +27,6 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 * Support for the latest & greatest version of Ubuntu Server LTS
 * Firewall is enabled by default
 * Full control over your rig(s)
-* Minimal fees (only from mining software)
 
 ## Tested on
 * **GPUs**

@@ -123,6 +123,7 @@ update-grub
 # make all the scripts executable
 chmod +x mine.sh eth.sh clockfan.sh
 clear
+# displat a message, then reboot
 echo -e "\U26CF" "${green}Happy Mining${reset}" "\U26CF"
 sleep 5
 reboot

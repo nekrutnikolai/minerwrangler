@@ -5,7 +5,7 @@
 # enable persistence mode
 nvidia-smi -pm ENABLED
 
-# set power limit to 75 watts
+# set power limits
 nvidia-smi -i 0 -pl 175
 nvidia-smi -i 1 -pl 145
 

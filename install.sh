@@ -138,7 +138,6 @@ else
 fi
 
 # REBOOT SYSTEM AND GET READY TO MINE
-
 update-grub
 
 # make all the scripts executable

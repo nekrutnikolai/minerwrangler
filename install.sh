@@ -46,7 +46,7 @@ confirm_install() {
 # define Nvidia installation
 nvidia_install() {
   # install all the necessary libraries
-  apt install unzip screen xserver-xorg-core xorg-dev libgtk-3-dev xdm lightdm -y
+  apt install unzip screen xserver-xorg-core xorg-dev libgtk-3-dev -y # xdm lightdm not sure if I need them, asks config during install
 
   # reinstall nvidia drivers if it is not a fresh install
   apt purge nvidia-*

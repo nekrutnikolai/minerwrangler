@@ -6,7 +6,7 @@
 nvidia-smi -pm ENABLED
 
 # set power limits
-nvidia-smi -i 0 -pl 175
+nvidia-smi -i 0 -pl 155
 nvidia-smi -i 1 -pl 145
 
 # configure gpu fan speed

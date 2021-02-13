@@ -49,7 +49,7 @@ nvidia_install() {
   add-apt-repository ppa:graphics-drivers/ppa -y
   apt upgrade -y
   # install all the necessary libraries, will ask config during install
-  apt install xorg lightdm nvidia-driver-440 nvidia-cuda-toolkit -y
+  apt install xorg nvidia-driver-440 nvidia-cuda-toolkit -y
   # nvidia-xconfig -a --allow-empty-initial-configuration --cool-bits=28 --use-display-device="DFP-0" --connected-monitor="DFP-0" --custom-edid="DFP-0:/etc/X11/dfp-edid.bin"
   nvidia-xconfig --enable-all-gpus --cool-bits=28 --allow-empty-initial-configuration
 }
@@ -119,9 +119,8 @@ else
 fi
 
 # REBOOT SYSTEM AND GET READY TO MINE
-update-grub
 # make all the scripts executable
-chmod +x mine.sh eth.sh clockfan.sh
+chmod +x mine.sh eth.sh clockfan.sh install2.sh
 clear
 # display a message, then reboot
 echo -e "\U26CF" "${green}Happy Mining${reset} & ${red}Heating${reset}" "\U26CF"

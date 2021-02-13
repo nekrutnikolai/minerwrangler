@@ -2,6 +2,10 @@
   MinerWrangler
 </h1>
 
+<h2 align="center">
+  Current state - not working!
+</h2>
+
 <h3 align="center">
   A headless cryptocurrency miner installer and manager
 </h3>

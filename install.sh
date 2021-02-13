@@ -2,7 +2,7 @@
 
 # created by Nikolai Nekrutenko
 
-# Ubuntu server 20.04 lts
+# Ubuntu server 20.04.2 LTS
 
 # DEFINING ALL THE VARIABLES
 
@@ -47,7 +47,7 @@ nvidia_install() {
   apt purge nvidia-*
   apt autoremove -y
   add-apt-repository ppa:graphics-drivers/ppa -y
-  apt upgrade
+  apt upgrade -y
   # install all the necessary libraries, will ask config during install
   apt install xorg lightdm nvidia-driver-440 nvidia-cuda-toolkit -y
   # nvidia-xconfig -a --allow-empty-initial-configuration --cool-bits=28 --use-display-device="DFP-0" --connected-monitor="DFP-0" --custom-edid="DFP-0:/etc/X11/dfp-edid.bin"
@@ -123,7 +123,7 @@ update-grub
 # make all the scripts executable
 chmod +x mine.sh eth.sh clockfan.sh
 clear
-# displat a message, then reboot
-echo -e "\U26CF" "${green}Happy Mining${reset}" "\U26CF"
+# display a message, then reboot
+echo -e "\U26CF" "${green}Happy Mining${reset} & ${red}Heating${reset}" "\U26CF"
 sleep 5
 reboot

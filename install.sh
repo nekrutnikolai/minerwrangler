@@ -50,7 +50,8 @@ nvidia_install() {
   apt upgrade -y
   # install all the necessary libraries, will ask config during install
   apt install xorg nvidia-driver-440 nvidia-cuda-toolkit -y
-  # nvidia-xconfig -a --allow-empty-initial-configuration --cool-bits=28 --use-display-device="DFP-0" --connected-monitor="DFP-0" --custom-edid="DFP-0:/etc/X11/dfp-edid.bin"
+  nvidia-xconfig -a --allow-empty-initial-configuration --cool-bits=28 --connected-monitor="DFP-0"
+  #--custom-edid="DFP-0:/etc/X11/dfp-edid.bin" --use-display-device="DFP-0"
   nvidia-xconfig --enable-all-gpus --cool-bits=28 --allow-empty-initial-configuration
 }
 
@@ -99,6 +100,10 @@ confirm_install "Is this the correct hardware?" || exit 0
 clear
 printf "\U1F48A" && confirm_install "The pill? (GTX 1080, 1080Ti & Titan XP)"
 clear
+
+# set the proper time
+sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
+sudo hwclock --systohc
 # update and upgrade packages to the latest version
 apt update && apt upgrade -y
 # just such a useful tool, should be installed regardless of option

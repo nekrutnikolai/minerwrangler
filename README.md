@@ -23,7 +23,7 @@
 
 ## The ultimate one-liner
 ```
-git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrangler && chmod +x install.sh && sudo ./install.sh
+git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrangler && chmod +x install1.sh && sudo ./install1.sh
 ```
 
 ## Features

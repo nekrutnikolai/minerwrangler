@@ -10,3 +10,5 @@ test -f ETHPill && screen -S pill -d -m sudo ./ETHPill || echo -e "no" "\U1F48A"
 
 # list all the screens
 screen -list
+
+echo "mining started, feel free to exit ssh"

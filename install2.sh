@@ -18,7 +18,7 @@ sed -i '/Option         "ConnectedMonitor" "DFP-0"/a\ \ \ \ Option \ \ \ \ \ \ \
 
 # make the other scripts executable, while removing permissions for the current one
 chmod 0 install2.sh
-chmod +x mine.sh eth.sh clockfan.sh
+chmod +x mine.sh eth.sh clockfan.sh config.sh
 # display some beautiful messages
 echo -e "\U26CF" "${green}Happy Mining${reset} & ${red}Heating${reset}" "\U26CF"
 sleep 3

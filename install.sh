@@ -49,10 +49,7 @@ nvidia_install() {
   add-apt-repository ppa:graphics-drivers/ppa -y
   apt upgrade -y
   # install all the necessary libraries, will ask config during install
-  apt install xorg nvidia-driver-460 nvidia-cuda-toolkit -y
-  nvidia-xconfig --enable-all-gpus --allow-empty-initial-configuration --cool-bits=28 --connected-monitor="DFP-0"
-  # setup, notice how the "\ \ \ \" is used as indents
-  sed -i '/Option         "ConnectedMonitor" "DFP-0"/a\ \ \ \ Option \ \ \ \ \ \ \ \ "Interactive" "False"' /etc/X11/xorg.conf
+  apt install nvidia-driver-460 nvidia-cuda-toolkit -y
 }
 
 # Phoenix Miner installation
@@ -125,9 +122,9 @@ fi
 
 # REBOOT SYSTEM AND GET READY TO MINE
 # make all the scripts executable
-chmod +x mine.sh eth.sh clockfan.sh install2.sh
+chmod +x install2.sh
 clear
 # display a message, then reboot
-echo -e "\U26CF" "${green}Happy Mining${reset} & ${red}Heating${reset}" "\U26CF"
-sleep 5
+echo "${red}Rebooting ...${reset}"
+sleep 2
 reboot

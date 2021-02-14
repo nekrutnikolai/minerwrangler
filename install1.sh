@@ -43,9 +43,7 @@ confirm_install() {
 
 # define Nvidia installation
 nvidia_install() {
-  # reinstall nvidia drivers and CUDA if it is not a fresh install
-  apt purge nvidia-*
-  apt autoremove -y
+  # add the nvidia drivers ppa
   add-apt-repository ppa:graphics-drivers/ppa -y
   apt upgrade -y
   # install all the necessary libraries, will ask config during install

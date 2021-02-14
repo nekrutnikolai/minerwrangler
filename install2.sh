@@ -23,6 +23,6 @@ chmod +x mine.sh eth.sh clockfan.sh
 echo -e "\U26CF" "${green}Happy Mining${reset} & ${red}Heating${reset}" "\U26CF"
 sleep 3
 clear
-echo "${red}Rebooting ...${reset}"
+echo "${red}Rebooting for the last time...${reset}"
 sleep 2
 reboot

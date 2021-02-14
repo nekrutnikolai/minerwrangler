@@ -64,3 +64,9 @@ sed -i "s/ETHwalletaddr/$wallet/g" eth.sh
 read -p 'Fancy rig name (only standard characters): ' rig
 confirm_install "Is this the name you wanted? $rig" || exit 0
 sed -i "s/rigname/$rig/g" eth.sh
+
+echo "miner config complete"
+
+# STARTED WORKING ON OC SETTINGS AND SETUP
+# variable that gets the number of graphics cards
+# numgpus=$(nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)

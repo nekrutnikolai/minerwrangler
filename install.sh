@@ -49,7 +49,7 @@ nvidia_install() {
   add-apt-repository ppa:graphics-drivers/ppa -y
   apt upgrade -y
   # install all the necessary libraries, will ask config during install
-  apt install xorg nvidia-driver-440 nvidia-cuda-toolkit -y
+  apt install xorg nvidia-driver-460 nvidia-cuda-toolkit -y
   nvidia-xconfig -a --allow-empty-initial-configuration --cool-bits=28 --connected-monitor="DFP-0"
   #--custom-edid="DFP-0:/etc/X11/dfp-edid.bin" --use-display-device="DFP-0"
   nvidia-xconfig --enable-all-gpus --cool-bits=28 --allow-empty-initial-configuration

@@ -31,6 +31,7 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 * Support for the latest & greatest version of Ubuntu Server LTS
 * Firewall is enabled by default
 * Full control over your rig(s)
+* See that beautiful CLI
 
 ## Tested on
 * **GPUs**
@@ -38,6 +39,7 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
   * RTX 2080
 * **Driver version**
   * nvidia-driver-440
+  * nvidia-driver-460
 
 ## To do
 * Write a usage guide

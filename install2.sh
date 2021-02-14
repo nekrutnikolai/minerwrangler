@@ -11,7 +11,7 @@ reset=`tput sgr0`
 
 apt upgrade -y
 
-apt install --no-install-recommends xorg lightdm lightdm-gtk-greeter -y
+apt install --no-install-recommends xorg lightdm lightdm-gtk-greeter -y 
 
 nvidia-xconfig --enable-all-gpus --allow-empty-initial-configuration --cool-bits=28 --connected-monitor="DFP-0"
 # setup, notice how the "\ \ \ \" is used as indents

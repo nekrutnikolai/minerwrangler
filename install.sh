@@ -50,9 +50,9 @@ nvidia_install() {
   apt upgrade -y
   # install all the necessary libraries, will ask config during install
   apt install xorg nvidia-driver-460 nvidia-cuda-toolkit -y
-  nvidia-xconfig -a --allow-empty-initial-configuration --cool-bits=28 --connected-monitor="DFP-0"
-  #--custom-edid="DFP-0:/etc/X11/dfp-edid.bin" --use-display-device="DFP-0"
-  nvidia-xconfig --enable-all-gpus --cool-bits=28 --allow-empty-initial-configuration
+  nvidia-xconfig --enable-all-gpus --allow-empty-initial-configuration --cool-bits=28 --connected-monitor="DFP-0"
+  # setup, notice how the "\ \ \ \" is used as indents
+  sed -i '/Option         "ConnectedMonitor" "DFP-0"/a\ \ \ \ Option \ \ \ \ \ \ \ \ "Interactive" "False"' /etc/X11/xorg.conf
 }
 
 # Phoenix Miner installation

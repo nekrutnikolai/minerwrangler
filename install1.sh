@@ -121,7 +121,8 @@ else
 fi
 
 # REBOOT SYSTEM AND GET READY TO MINE
-# make all the scripts executable
+# make the next install script executable, while removing permissions for the current one
+chmod 0 install1.sh
 chmod +x install2.sh
 clear
 # display a message, then reboot

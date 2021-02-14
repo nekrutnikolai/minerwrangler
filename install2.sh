@@ -11,14 +11,16 @@ reset=`tput sgr0`
 
 apt upgrade -y
 
-apt install --no-install-recommends xorg lightdm lightdm-gtk-greeter -y 
+apt install --no-install-recommends xorg lightdm lightdm-gtk-greeter -y
 
 nvidia-xconfig --enable-all-gpus --allow-empty-initial-configuration --cool-bits=28 --connected-monitor="DFP-0"
 # setup, notice how the "\ \ \ \" is used as indents
 sed -i '/Option         "ConnectedMonitor" "DFP-0"/a\ \ \ \ Option \ \ \ \ \ \ \ \ "Interactive" "False"' /etc/X11/xorg.conf
 
+# make the other scripts executable, while removing permissions for the current one
+chmod 0 install2.sh
 chmod +x mine.sh eth.sh clockfan.sh
-
+# display some beautiful messages
 echo -e "\U26CF" "${green}Happy Mining${reset} & ${red}Heating${reset}" "\U26CF"
 sleep 3
 clear

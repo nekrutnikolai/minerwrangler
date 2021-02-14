@@ -14,7 +14,7 @@ reset=`tput sgr0`
 #define the installation variable, and set it to one
 var=1
 
-# define variables for the manufacturer and model of the GPU(s), and hide the commandline output
+# define variables for the manufacturer and model of the GPU(s), and hide the command line output
 {
   vendor=$(lshw -class display | grep 'vendor' | uniq)
   model=$(lshw -class display | grep 'product')

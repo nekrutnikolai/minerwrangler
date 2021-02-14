@@ -4,6 +4,11 @@
 
 # Ubuntu server 20.04.2 LTS
 
+#define colors for colored text
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
 apt upgrade -y
 
 apt install --no-install-recommends xorg lightdm lightdm-gtk-greeter -y
@@ -17,6 +22,6 @@ chmod +x mine.sh eth.sh clockfan.sh
 echo -e "\U26CF" "${green}Happy Mining${reset} & ${red}Heating${reset}" "\U26CF"
 sleep 3
 clear
-echo -e "\U26CF" "${red}Rebooting ...${reset}" "\U26CF"
+echo "${red}Rebooting ...${reset}"
 sleep 2
 reboot

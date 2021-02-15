@@ -96,9 +96,6 @@ clear
 printf "\U1F48A" && confirm_install "The pill? (GTX 1080, 1080Ti & Titan XP)"
 clear
 
-# set the proper time
-sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
-sudo hwclock --systohc
 # update and upgrade packages to the latest version
 apt update && apt upgrade -y
 # just such a useful tool, should be installed regardless of option

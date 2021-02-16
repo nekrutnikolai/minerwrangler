@@ -24,7 +24,7 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 
 - [x] One line to install
 - [x] Full control over your rig(s)
-- [x] Integrated with [OhGodAnETHlargementPill 💊](https://github.com/admin-ipfs/OhGodAnETHlargementPill) (1080, 1080Ti & TITAN Xp—GDDR5X GPUs)
+- [x] Integrated with [💊OhGodAnETHlargementPill](https://github.com/admin-ipfs/OhGodAnETHlargementPill) (1080, 1080Ti & TITAN Xp—GDDR5X GPUs)
 > "ED (Ethereum Dysfunction) affects 1 in 10 NVIDIA GPUs in North America"
 
 - [x] Simple and intuitive to use

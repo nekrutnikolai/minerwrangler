@@ -50,5 +50,6 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 
 ## To do
 * Add option to automatically mine on boot
+* XMRig support
 * AMD version
 * Support other miners and algorithms

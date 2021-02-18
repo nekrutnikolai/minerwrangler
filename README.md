@@ -2,7 +2,7 @@
   MinerWrangler
 </h1>
 
-![](/resources/MinerWrangler.png)
+![](/resources/minerwrangler.png)
 
 <h3 align="center">
   A headless cryptocurrency miner installer and manager

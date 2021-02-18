@@ -1,12 +1,12 @@
 ![logo](/resources/minerwrangler.png)
 
-<h3 align="center">
+<h2 align="center">
   A headless cryptocurrency miner installer and manager
-</h3>
+</h2>
 
-<h4 align="center">
+<h3 align="center">
   <a href="https://cryptoclarified.netlify.app/docs/minerwrangler/">Tutorial & quickstart</a>
-</h4>
+</h3>
 
 <p align="center">
   MinerWrangler is the ultimate bundle of bash scripts to ease your way into cryptocurrency mining that is open-source and gives you full control over your rigs—by default. No monitor, keyboard, or mouse required.
@@ -27,6 +27,8 @@
 git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrangler && chmod +x install1.sh && sudo ./install1.sh
 ```
 
+## Features
+
 - [x] One line to install
 - [x] Full control over your rig(s)
 - [x] Integrated with 💊 [OhGodAnETHlargementPill](https://github.com/admin-ipfs/OhGodAnETHlargementPill) (GTX 1080, GTX 1080Ti & TITAN Xp—GDDR5X GPUs)
@@ -39,6 +41,7 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 - [x] Beautiful CLI
 
 ## Tested on
+
 * **GPUs**
   * GTX 1080
   * RTX 2080
@@ -47,6 +50,7 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
   * nvidia-driver-460 (default)
 
 ## To do
+
 * Add option to automatically mine on boot
 * XMRig support
 * AMD version

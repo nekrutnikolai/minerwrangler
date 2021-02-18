@@ -31,14 +31,14 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 
 - [x] One line to install
 - [x] Full control over your rig(s)
+- [x] Truly headless
 - [x] Integrated with 💊 [OhGodAnETHlargementPill](https://github.com/admin-ipfs/OhGodAnETHlargementPill) (GTX 1080, GTX 1080Ti & TITAN Xp—GDDR5X GPUs)
 > "ED (Ethereum Dysfunction) affects 1 in 10 NVIDIA GPUs in North America"
 
 - [x] Simple and intuitive to use
 - [x] Support for the latest & greatest version of Ubuntu Server LTS
 - [x] Firewall is enabled by default
-- [x] Only a keyboard is required for initial install
-- [x] Beautiful CLI
+- [x] Command-line interface
 
 ## Tested on
 

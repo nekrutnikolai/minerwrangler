@@ -55,3 +55,11 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 * XMRig support
 * AMD version
 * Support other miners and algorithms
+
+## Logo image credits
+
+- Western retro font - https://www.dafont.com/western-retro.font
+- Cowboy hat - https://www.pngitem.com/middle/hTiibR_guitar-clipart-cowboy-hat-cartoon-transparent-cowboy-hat/
+- Cactus - http://clipart-library.com/clipart/cactus-clipart-34.htm
+- Headless person from Dumb Ways To Die - https://dumbways2die.fandom.com/wiki/Hapless
+- Ethereum logo - https://en.wikipedia.org/wiki/Ethereum#/media/File:Ethereum-icon-purple.svg

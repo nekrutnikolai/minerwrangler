@@ -1,7 +1,7 @@
 ![logo](/resources/minerwrangler.png)
 
 <h2 align="center">
-  A headless driver & miner installer & configurator
+  A headless driver installer & miner configurator
 </h2>
 
 <h3 align="center">

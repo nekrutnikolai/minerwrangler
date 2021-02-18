@@ -1,7 +1,7 @@
 ![logo](/resources/minerwrangler.png)
 
 <h2 align="center">
-  A headless cryptocurrency miner installer and manager
+  A headless driver & miner installer & configurator
 </h2>
 
 <h3 align="center">

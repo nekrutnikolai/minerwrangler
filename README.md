@@ -1,7 +1,7 @@
 ![logo](/resources/minerwrangler.png)
 
 <h2 align="center">
-  A headless driver installer & miner configurator
+  A headless driver installer & crypto miner configurator
 </h2>
 
 <h3 align="center">
@@ -9,7 +9,7 @@
 </h3>
 
 <p align="center">
-  MinerWrangler is the ultimate bundle of bash scripts to ease your way into cryptocurrency mining that is open-source and gives you full control over your rigs—by default. No monitor, keyboard, or mouse required.
+  MinerWrangler is the ultimate bundle of bash scripts to ease your way into cryptocurrency mining that is open-source and gives you full control over your rigs—by default. No monitor, keyboard, or mouse required. Only NVIDIA support for now.
 </p>
 
 <p align="center">
@@ -54,7 +54,7 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 * Add option to automatically mine on boot
 * Script to more easily configure overclocks and fan speeds
 * XMRig support
-* AMD version
+* AMD GPU support
 * Support other miners and algorithms
 
 ## Logo image credits

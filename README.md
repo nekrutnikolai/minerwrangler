@@ -53,6 +53,7 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 
 * Add option to automatically mine on boot
 * Script to more easily configure overclocks and fan speeds
+* RVN mining support
 * Break down existing code in detail
 * XMRig support
 * AMD GPU support

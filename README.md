@@ -58,10 +58,17 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 * AMD GPU support
 * Support other miners and algorithms
 
-## Logo image credits
+## Credits
 
-* Western retro font - https://www.dafont.com/western-retro.font
-* Cowboy hat - https://www.pngitem.com/middle/hTiibR_guitar-clipart-cowboy-hat-cartoon-transparent-cowboy-hat/
-* Cactus - http://clipart-library.com/clipart/cactus-clipart-34.htm
-* Headless person from Dumb Ways To Die - https://dumbways2die.fandom.com/wiki/Hapless
-* Ethereum logo - https://en.wikipedia.org/wiki/Ethereum#/media/File:Ethereum-icon-purple.svg
+### Threads and forums that helped massively
+
+* [OC Nvidia GTX1070s in Ubuntu 16.04LTS for Ethereum mining](https://gist.github.com/bsodmike/369f8a202c5a5c97cfbd481264d549e9) - tricking NVIDIA drivers into allowing headless overclocking
+* [How to create a bootable USB stick to flash a BIOS](https://askubuntu.com/questions/46886/how-to-create-a-bootable-usb-stick-to-flash-a-bios) - updating BIOS on old computer
+
+### Logo image credits
+
+* [Western retro font](https://www.dafont.com/western-retro.font)
+* [Cowboy hat](https://www.pngitem.com/middle/hTiibR_guitar-clipart-cowboy-hat-cartoon-transparent-cowboy-hat/)
+* [Cactus](http://clipart-library.com/clipart/cactus-clipart-34.htm)
+* [Headless person from Dumb Ways To Die](https://dumbways2die.fandom.com/wiki/Hapless)
+* [Ethereum logo](https://en.wikipedia.org/wiki/Ethereum#/media/File:Ethereum-icon-purple.svg)

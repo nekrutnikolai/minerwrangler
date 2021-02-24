@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# created by Nikolai Nekrutenko
+# created by Nikolai
 
 cd PhoenixMiner
 

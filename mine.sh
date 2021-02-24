@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# created by Nikolai Nekrutenko
+# created by Nikolai
 
 # check if the eth script exists, then start mining
 test -f eth.sh && screen -S eth -d -m ./eth.sh || echo "no ETH script found"

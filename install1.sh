@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# created by Nikolai Nekrutenko
+# created by Nikolai
 
 # Ubuntu server 20.04.2 LTS
 

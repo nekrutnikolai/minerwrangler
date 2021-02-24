@@ -83,7 +83,7 @@ I kept mining ETH non-stop until about June of the same year. Having heard of [N
 
 Fast forward to November 2021, and my dad had lended me his RTX 2080 to mine as he was no longer using it for work. I pointed it at ETH, as well as the GTX 1080 was also, once again mining ETH. I also managed to pick up a Red Devil RX 5700XT on Craiglist—an absolute beast of a GPU—for about $350 used. I also invested in a hardware wallet, the [Ledger Nano X](https://shop.ledger.com/products/ledger-nano-x), to keep my crypto as safe as possible.
 
-So to this day, I have a GTX 1080, and a RTX 2080 mining ETH with *MinerWrangler*, and two RX 580's and a RX 5700XT mining ETH using HiveOS unfortunately. *I still haven't figured out how to use AMD drivers headlessly.* However, I might switch the RTX 2080 to RVN as recently, the popularity of the project has gone up by a lot! I'm making about 0.01722 ETH/day, which equates to $29.07/day.
+So to this day, I have a GTX 1080, and a RTX 2080 mining ETH with *MinerWrangler*, and two RX 580's and a RX 5700XT mining ETH using HiveOS unfortunately. *I still haven't figured out how to use AMD drivers headlessly.* However, I might switch the RTX 2080 to RVN as recently, the popularity of the project has gone up by a lot!
 
 Who knows, maybe I'll major in Blockchain development—I find crypto fascinating and believe in a decentralized future.
 

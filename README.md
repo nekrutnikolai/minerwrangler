@@ -65,7 +65,7 @@ NVIDIA drivers on Linux are rather finicky and do not like being overclocked wit
 
 After countless hours, probably even days of banging my head against the monitor in despair to have my rigs work headlessly, and be **actually be overclockable**, I wanted to find a way that was simple, yet have the code and process be transparent to everyone, behind no paywall. In contrast to operating systems like HiveOS, or NHOS, using *MinerWrangler* in conjunction with Ubuntu Server, you can actually understand each step of the process and have full control over your rigs as providers of the blockchain.
 
-### Prologue
+## Prologue
 
 Last edit: Feb 24, 2021
 

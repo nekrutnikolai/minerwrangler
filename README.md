@@ -1,8 +1,8 @@
 ![logo](/resources/minerwrangler.png)
 
-<h5 align="center">
+<p align="center">
   <em>Get it? It's headless!</em>
-</h5>
+</p>
 
 <h2 align="center">
   A headless driver installer & crypto miner configurator

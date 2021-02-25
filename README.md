@@ -1,5 +1,9 @@
 ![logo](/resources/minerwrangler.png)
 
+<h5 align="center">
+  <em>Get it? It's headless!</em>
+</h5>
+
 <h2 align="center">
   A headless driver installer & crypto miner configurator
 </h2>
@@ -72,7 +76,7 @@ After countless hours, probably even days of banging my head against the monitor
 * [OC Nvidia GTX1070s in Ubuntu 16.04LTS for Ethereum mining](https://gist.github.com/bsodmike/369f8a202c5a5c97cfbd481264d549e9) - tricking NVIDIA drivers into allowing headless overclocking
 * [How to create a bootable USB stick to flash a BIOS](https://askubuntu.com/questions/46886/how-to-create-a-bootable-usb-stick-to-flash-a-bios) - updating BIOS on an old computer
 
-### Logo image credits
+### Logo
 
 * [Western retro font](https://www.dafont.com/western-retro.font)
 * [Cowboy hat](https://www.pngitem.com/middle/hTiibR_guitar-clipart-cowboy-hat-cartoon-transparent-cowboy-hat/)

@@ -52,14 +52,12 @@ nvidia_install() {
 
 # Phoenix Miner installation
 phoenixminer_install() {
-  # install unzip
-  apt install unzip -y
   # Download latest Phoenix Miner (5.5c at the time of editing this) - https://phoenixminer.org/download/latest/
-  wget https://bit.ly/3pf1gzU
-  # Extract the file, rename it, and delete the installer
-  unzip 3pf1gzU
+  wget https://github.com/PhoenixMinerDevTeam/PhoenixMiner/releases/download/5.5c/PhoenixMiner_5.5c_Linux.tar.gz
+  # Extract the file, delete the installer tar.gz file, and rename it
+  tar -zxvf PhoenixMiner_*
+  rm *tar.gz
   mv PhoenixMiner_* PhoenixMiner
-  rm 3pf1gzU
   # Make Phoenix Miner itself executable
   cd PhoenixMiner && chmod +x PhoenixMiner && cd ..
 }

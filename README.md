@@ -55,6 +55,7 @@ git clone https://github.com/NikolaiTeslovich/minerwrangler.git && cd minerwrang
 
 ## To do
 
+* Run the installation in a screen session for more bullet-proofness
 * Add option to automatically mine on boot
 * Script to more easily configure overclocks and fan speeds
 * RVN mining support

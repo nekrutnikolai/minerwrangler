@@ -9,7 +9,7 @@
 </h2>
 
 <h3 align="center">
-  <a href="https://cryptoclarified.netlify.app/docs/minerwrangler/">Installation & Tutorial</a>
+  <a href="https://cryptoclarified.netlify.app/minerwrangler/">Installation & Tutorial</a>
 </h3>
 
 <p align="center">
